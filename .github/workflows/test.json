@@ -1,0 +1,706 @@
+[
+    {
+        "project": ".github",
+        "report": {
+            "check_type": "github_actions",
+            "results": {
+                "failed_checks": [
+                    {
+                        "check_id": "CKV2_GHA_1",
+                        "bc_check_id": null,
+                        "check_name": "Ensure top-level permissions are not set to write-all",
+                        "check_result": {
+                            "result": "FAILED",
+                            "evaluated_keys": [
+                                "permissions"
+                            ]
+                        },
+                        "code_block": null,
+                        "file_path": "/workflows/report.yml",
+                        "file_abs_path": "/home/noh4nsen/work/actions/poc-tf-tools/.github/workflows/report.yml",
+                        "repo_file_path": "/workflows/report.yml",
+                        "file_line_range": [
+                            0,
+                            1
+                        ],
+                        "resource": "on(reports)",
+                        "evaluations": null,
+                        "check_class": "checkov.common.graph.checks_infra.base_check",
+                        "fixed_definition": null,
+                        "entity_tags": null,
+                        "caller_file_path": null,
+                        "caller_file_line_range": null,
+                        "resource_address": null,
+                        "severity": null,
+                        "bc_category": null,
+                        "benchmarks": null,
+                        "description": null,
+                        "short_description": null,
+                        "vulnerability_details": null,
+                        "connected_node": null,
+                        "guideline": null,
+                        "details": [],
+                        "check_len": null,
+                        "definition_context_file_path": null,
+                        "triggers": [
+                            []
+                        ],
+                        "job": [
+                            ""
+                        ],
+                        "workflow_name": "reports"
+                    }
+                ]
+            },
+            "summary": {
+                "passed": 59,
+                "failed": 1,
+                "skipped": 0,
+                "parsing_errors": 0,
+                "resource_count": 0,
+                "checkov_version": "2.4.2"
+            }
+        }
+    },
+    {
+        "project": ".",
+        "report": [
+            {
+                "check_type": "terraform",
+                "results": {
+                    "failed_checks": [
+                        {
+                            "check_id": "CKV_K8S_28",
+                            "bc_check_id": "BC_K8S_27",
+                            "check_name": "Minimize the admission of containers with the NET_RAW capability",
+                            "check_result": {
+                                "result": "FAILED",
+                                "evaluated_keys": [
+                                    "spec/[0]/template/[0]/spec/[0]/container/0"
+                                ]
+                            },
+                            "code_block": null,
+                            "file_path": "/project_2/resource_nginx.tf",
+                            "file_abs_path": "/home/noh4nsen/work/actions/poc-tf-tools/project_2/resource_nginx.tf",
+                            "repo_file_path": "/project_2/resource_nginx.tf",
+                            "file_line_range": [
+                                1,
+                                46
+                            ],
+                            "resource": "kubernetes_deployment.nginx",
+                            "evaluations": null,
+                            "check_class": "checkov.terraform.checks.resource.kubernetes.DropCapabilities",
+                            "fixed_definition": null,
+                            "entity_tags": null,
+                            "caller_file_path": null,
+                            "caller_file_line_range": null,
+                            "resource_address": null,
+                            "severity": null,
+                            "bc_category": null,
+                            "benchmarks": null,
+                            "description": null,
+                            "short_description": null,
+                            "vulnerability_details": null,
+                            "connected_node": null,
+                            "guideline": "https://docs.paloaltonetworks.com/content/techdocs/en_US/prisma/prisma-cloud/prisma-cloud-code-security-policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-27.html",
+                            "details": [],
+                            "check_len": null,
+                            "definition_context_file_path": "/home/noh4nsen/work/actions/poc-tf-tools/project_2/resource_nginx.tf"
+                        },
+                        {
+                            "check_id": "CKV_K8S_9",
+                            "bc_check_id": "BC_K8S_8",
+                            "check_name": "Readiness Probe Should be Configured",
+                            "check_result": {
+                                "result": "FAILED",
+                                "evaluated_keys": [
+                                    "spec/[0]/template/[0]/spec/[0]/container/[0]/readiness_probe/[0]"
+                                ]
+                            },
+                            "code_block": null,
+                            "file_path": "/project_2/resource_nginx.tf",
+                            "file_abs_path": "/home/noh4nsen/work/actions/poc-tf-tools/project_2/resource_nginx.tf",
+                            "repo_file_path": "/project_2/resource_nginx.tf",
+                            "file_line_range": [
+                                1,
+                                46
+                            ],
+                            "resource": "kubernetes_deployment.nginx",
+                            "evaluations": null,
+                            "check_class": "checkov.terraform.checks.resource.kubernetes.ReadinessProbe",
+                            "fixed_definition": null,
+                            "entity_tags": null,
+                            "caller_file_path": null,
+                            "caller_file_line_range": null,
+                            "resource_address": null,
+                            "severity": null,
+                            "bc_category": null,
+                            "benchmarks": null,
+                            "description": null,
+                            "short_description": null,
+                            "vulnerability_details": null,
+                            "connected_node": null,
+                            "guideline": "https://docs.paloaltonetworks.com/content/techdocs/en_US/prisma/prisma-cloud/prisma-cloud-code-security-policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-8.html",
+                            "details": [],
+                            "check_len": null,
+                            "definition_context_file_path": "/home/noh4nsen/work/actions/poc-tf-tools/project_2/resource_nginx.tf"
+                        },
+                        {
+                            "check_id": "CKV_K8S_29",
+                            "bc_check_id": "BC_K8S_43",
+                            "check_name": "Apply security context to your pods, deployments and daemon_sets",
+                            "check_result": {
+                                "result": "FAILED",
+                                "evaluated_keys": [
+                                    "spec/[0]/template/[0]/spec/[0]/container/0"
+                                ]
+                            },
+                            "code_block": null,
+                            "file_path": "/project_2/resource_nginx.tf",
+                            "file_abs_path": "/home/noh4nsen/work/actions/poc-tf-tools/project_2/resource_nginx.tf",
+                            "repo_file_path": "/project_2/resource_nginx.tf",
+                            "file_line_range": [
+                                1,
+                                46
+                            ],
+                            "resource": "kubernetes_deployment.nginx",
+                            "evaluations": null,
+                            "check_class": "checkov.terraform.checks.resource.kubernetes.PodSecurityContext",
+                            "fixed_definition": null,
+                            "entity_tags": null,
+                            "caller_file_path": null,
+                            "caller_file_line_range": null,
+                            "resource_address": null,
+                            "severity": null,
+                            "bc_category": null,
+                            "benchmarks": null,
+                            "description": null,
+                            "short_description": null,
+                            "vulnerability_details": null,
+                            "connected_node": null,
+                            "guideline": "https://docs.paloaltonetworks.com/content/techdocs/en_US/prisma/prisma-cloud/prisma-cloud-code-security-policy-reference/kubernetes-policies/kubernetes-policy-index/ensure-securitycontext-is-applied-to-pods-and-containers.html",
+                            "details": [],
+                            "check_len": null,
+                            "definition_context_file_path": "/home/noh4nsen/work/actions/poc-tf-tools/project_2/resource_nginx.tf"
+                        },
+                        {
+                            "check_id": "CKV_K8S_15",
+                            "bc_check_id": "BC_K8S_14",
+                            "check_name": "Image Pull Policy should be Always",
+                            "check_result": {
+                                "result": "FAILED",
+                                "evaluated_keys": [
+                                    "spec/[0]/template/[0]/spec/[0]/container/[0]"
+                                ]
+                            },
+                            "code_block": null,
+                            "file_path": "/project_2/resource_nginx.tf",
+                            "file_abs_path": "/home/noh4nsen/work/actions/poc-tf-tools/project_2/resource_nginx.tf",
+                            "repo_file_path": "/project_2/resource_nginx.tf",
+                            "file_line_range": [
+                                1,
+                                46
+                            ],
+                            "resource": "kubernetes_deployment.nginx",
+                            "evaluations": null,
+                            "check_class": "checkov.terraform.checks.resource.kubernetes.ImagePullPolicyAlways",
+                            "fixed_definition": null,
+                            "entity_tags": null,
+                            "caller_file_path": null,
+                            "caller_file_line_range": null,
+                            "resource_address": null,
+                            "severity": null,
+                            "bc_category": null,
+                            "benchmarks": null,
+                            "description": null,
+                            "short_description": null,
+                            "vulnerability_details": null,
+                            "connected_node": null,
+                            "guideline": "https://docs.paloaltonetworks.com/content/techdocs/en_US/prisma/prisma-cloud/prisma-cloud-code-security-policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-14.html",
+                            "details": [],
+                            "check_len": null,
+                            "definition_context_file_path": "/home/noh4nsen/work/actions/poc-tf-tools/project_2/resource_nginx.tf"
+                        },
+                        {
+                            "check_id": "CKV_K8S_30",
+                            "bc_check_id": "BC_K8S_28",
+                            "check_name": "Apply security context to your pods and containers",
+                            "check_result": {
+                                "result": "FAILED",
+                                "evaluated_keys": [
+                                    "spec/[0]/template/[0]/spec/[0]/container/[0]/security_context"
+                                ]
+                            },
+                            "code_block": null,
+                            "file_path": "/project_2/resource_nginx.tf",
+                            "file_abs_path": "/home/noh4nsen/work/actions/poc-tf-tools/project_2/resource_nginx.tf",
+                            "repo_file_path": "/project_2/resource_nginx.tf",
+                            "file_line_range": [
+                                1,
+                                46
+                            ],
+                            "resource": "kubernetes_deployment.nginx",
+                            "evaluations": null,
+                            "check_class": "checkov.terraform.checks.resource.kubernetes.ContainerSecurityContext",
+                            "fixed_definition": null,
+                            "entity_tags": null,
+                            "caller_file_path": null,
+                            "caller_file_line_range": null,
+                            "resource_address": null,
+                            "severity": null,
+                            "bc_category": null,
+                            "benchmarks": null,
+                            "description": null,
+                            "short_description": null,
+                            "vulnerability_details": null,
+                            "connected_node": null,
+                            "guideline": "https://docs.paloaltonetworks.com/content/techdocs/en_US/prisma/prisma-cloud/prisma-cloud-code-security-policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-28.html",
+                            "details": [],
+                            "check_len": null,
+                            "definition_context_file_path": "/home/noh4nsen/work/actions/poc-tf-tools/project_2/resource_nginx.tf"
+                        },
+                        {
+                            "check_id": "CKV_K8S_8",
+                            "bc_check_id": "BC_K8S_7",
+                            "check_name": "Liveness Probe Should be Configured",
+                            "check_result": {
+                                "result": "FAILED",
+                                "evaluated_keys": [
+                                    "spec/[0]/container/[0]/liveness_probe/[0]"
+                                ]
+                            },
+                            "code_block": null,
+                            "file_path": "/project_2/resource_nginx.tf",
+                            "file_abs_path": "/home/noh4nsen/work/actions/poc-tf-tools/project_2/resource_nginx.tf",
+                            "repo_file_path": "/project_2/resource_nginx.tf",
+                            "file_line_range": [
+                                1,
+                                46
+                            ],
+                            "resource": "kubernetes_deployment.nginx",
+                            "evaluations": null,
+                            "check_class": "checkov.terraform.checks.resource.kubernetes.LivenessProbe",
+                            "fixed_definition": null,
+                            "entity_tags": null,
+                            "caller_file_path": null,
+                            "caller_file_line_range": null,
+                            "resource_address": null,
+                            "severity": null,
+                            "bc_category": null,
+                            "benchmarks": null,
+                            "description": null,
+                            "short_description": null,
+                            "vulnerability_details": null,
+                            "connected_node": null,
+                            "guideline": "https://docs.paloaltonetworks.com/content/techdocs/en_US/prisma/prisma-cloud/prisma-cloud-code-security-policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-7.html",
+                            "details": [],
+                            "check_len": null,
+                            "definition_context_file_path": "/home/noh4nsen/work/actions/poc-tf-tools/project_2/resource_nginx.tf"
+                        },
+                        {
+                            "check_id": "CKV_K8S_43",
+                            "bc_check_id": "BC_K8S_39",
+                            "check_name": "Image should use digest",
+                            "check_result": {
+                                "result": "FAILED",
+                                "evaluated_keys": [
+                                    "spec/[0]/template/[0]/spec/[0]/container/[0]/image"
+                                ]
+                            },
+                            "code_block": null,
+                            "file_path": "/project_2/resource_nginx.tf",
+                            "file_abs_path": "/home/noh4nsen/work/actions/poc-tf-tools/project_2/resource_nginx.tf",
+                            "repo_file_path": "/project_2/resource_nginx.tf",
+                            "file_line_range": [
+                                1,
+                                46
+                            ],
+                            "resource": "kubernetes_deployment.nginx",
+                            "evaluations": null,
+                            "check_class": "checkov.terraform.checks.resource.kubernetes.ImageDigest",
+                            "fixed_definition": null,
+                            "entity_tags": null,
+                            "caller_file_path": null,
+                            "caller_file_line_range": null,
+                            "resource_address": null,
+                            "severity": null,
+                            "bc_category": null,
+                            "benchmarks": null,
+                            "description": null,
+                            "short_description": null,
+                            "vulnerability_details": null,
+                            "connected_node": null,
+                            "guideline": "https://docs.paloaltonetworks.com/content/techdocs/en_US/prisma/prisma-cloud/prisma-cloud-code-security-policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-39.html",
+                            "details": [],
+                            "check_len": null,
+                            "definition_context_file_path": "/home/noh4nsen/work/actions/poc-tf-tools/project_2/resource_nginx.tf"
+                        }
+                    ]
+                },
+                "summary": {
+                    "passed": 21,
+                    "failed": 7,
+                    "skipped": 0,
+                    "parsing_errors": 0,
+                    "resource_count": 6,
+                    "checkov_version": "2.4.2"
+                }
+            },
+            {
+                "check_type": "github_actions",
+                "results": {
+                    "failed_checks": [
+                        {
+                            "check_id": "CKV2_GHA_1",
+                            "bc_check_id": null,
+                            "check_name": "Ensure top-level permissions are not set to write-all",
+                            "check_result": {
+                                "result": "FAILED",
+                                "evaluated_keys": [
+                                    "permissions"
+                                ]
+                            },
+                            "code_block": null,
+                            "file_path": "/.github/workflows/report.yml",
+                            "file_abs_path": "/home/noh4nsen/work/actions/poc-tf-tools/.github/workflows/report.yml",
+                            "repo_file_path": "/.github/workflows/report.yml",
+                            "file_line_range": [
+                                0,
+                                1
+                            ],
+                            "resource": "on(reports)",
+                            "evaluations": null,
+                            "check_class": "checkov.common.graph.checks_infra.base_check",
+                            "fixed_definition": null,
+                            "entity_tags": null,
+                            "caller_file_path": null,
+                            "caller_file_line_range": null,
+                            "resource_address": null,
+                            "severity": null,
+                            "bc_category": null,
+                            "benchmarks": null,
+                            "description": null,
+                            "short_description": null,
+                            "vulnerability_details": null,
+                            "connected_node": null,
+                            "guideline": null,
+                            "details": [],
+                            "check_len": null,
+                            "definition_context_file_path": null,
+                            "triggers": [
+                                []
+                            ],
+                            "job": [
+                                ""
+                            ],
+                            "workflow_name": "reports"
+                        }
+                    ]
+                },
+                "summary": {
+                    "passed": 59,
+                    "failed": 1,
+                    "skipped": 0,
+                    "parsing_errors": 0,
+                    "resource_count": 0,
+                    "checkov_version": "2.4.2"
+                }
+            }
+        ]
+    },
+    {
+        "project": "project_1",
+        "report": {
+            "passed": 0,
+            "failed": 0,
+            "skipped": 0,
+            "parsing_errors": 0,
+            "resource_count": 0,
+            "checkov_version": "2.4.2"
+        }
+    },
+    {
+        "project": "project_2",
+        "report": {
+            "check_type": "terraform",
+            "results": {
+                "failed_checks": [
+                    {
+                        "check_id": "CKV_K8S_28",
+                        "bc_check_id": "BC_K8S_27",
+                        "check_name": "Minimize the admission of containers with the NET_RAW capability",
+                        "check_result": {
+                            "result": "FAILED",
+                            "evaluated_keys": [
+                                "spec/[0]/template/[0]/spec/[0]/container/0"
+                            ]
+                        },
+                        "code_block": null,
+                        "file_path": "/resource_nginx.tf",
+                        "file_abs_path": "/home/noh4nsen/work/actions/poc-tf-tools/project_2/resource_nginx.tf",
+                        "repo_file_path": "/resource_nginx.tf",
+                        "file_line_range": [
+                            1,
+                            46
+                        ],
+                        "resource": "kubernetes_deployment.nginx",
+                        "evaluations": null,
+                        "check_class": "checkov.terraform.checks.resource.kubernetes.DropCapabilities",
+                        "fixed_definition": null,
+                        "entity_tags": null,
+                        "caller_file_path": null,
+                        "caller_file_line_range": null,
+                        "resource_address": null,
+                        "severity": null,
+                        "bc_category": null,
+                        "benchmarks": null,
+                        "description": null,
+                        "short_description": null,
+                        "vulnerability_details": null,
+                        "connected_node": null,
+                        "guideline": "https://docs.paloaltonetworks.com/content/techdocs/en_US/prisma/prisma-cloud/prisma-cloud-code-security-policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-27.html",
+                        "details": [],
+                        "check_len": null,
+                        "definition_context_file_path": "/home/noh4nsen/work/actions/poc-tf-tools/project_2/resource_nginx.tf"
+                    },
+                    {
+                        "check_id": "CKV_K8S_9",
+                        "bc_check_id": "BC_K8S_8",
+                        "check_name": "Readiness Probe Should be Configured",
+                        "check_result": {
+                            "result": "FAILED",
+                            "evaluated_keys": [
+                                "spec/[0]/template/[0]/spec/[0]/container/[0]/readiness_probe/[0]"
+                            ]
+                        },
+                        "code_block": null,
+                        "file_path": "/resource_nginx.tf",
+                        "file_abs_path": "/home/noh4nsen/work/actions/poc-tf-tools/project_2/resource_nginx.tf",
+                        "repo_file_path": "/resource_nginx.tf",
+                        "file_line_range": [
+                            1,
+                            46
+                        ],
+                        "resource": "kubernetes_deployment.nginx",
+                        "evaluations": null,
+                        "check_class": "checkov.terraform.checks.resource.kubernetes.ReadinessProbe",
+                        "fixed_definition": null,
+                        "entity_tags": null,
+                        "caller_file_path": null,
+                        "caller_file_line_range": null,
+                        "resource_address": null,
+                        "severity": null,
+                        "bc_category": null,
+                        "benchmarks": null,
+                        "description": null,
+                        "short_description": null,
+                        "vulnerability_details": null,
+                        "connected_node": null,
+                        "guideline": "https://docs.paloaltonetworks.com/content/techdocs/en_US/prisma/prisma-cloud/prisma-cloud-code-security-policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-8.html",
+                        "details": [],
+                        "check_len": null,
+                        "definition_context_file_path": "/home/noh4nsen/work/actions/poc-tf-tools/project_2/resource_nginx.tf"
+                    },
+                    {
+                        "check_id": "CKV_K8S_29",
+                        "bc_check_id": "BC_K8S_43",
+                        "check_name": "Apply security context to your pods, deployments and daemon_sets",
+                        "check_result": {
+                            "result": "FAILED",
+                            "evaluated_keys": [
+                                "spec/[0]/template/[0]/spec/[0]/container/0"
+                            ]
+                        },
+                        "code_block": null,
+                        "file_path": "/resource_nginx.tf",
+                        "file_abs_path": "/home/noh4nsen/work/actions/poc-tf-tools/project_2/resource_nginx.tf",
+                        "repo_file_path": "/resource_nginx.tf",
+                        "file_line_range": [
+                            1,
+                            46
+                        ],
+                        "resource": "kubernetes_deployment.nginx",
+                        "evaluations": null,
+                        "check_class": "checkov.terraform.checks.resource.kubernetes.PodSecurityContext",
+                        "fixed_definition": null,
+                        "entity_tags": null,
+                        "caller_file_path": null,
+                        "caller_file_line_range": null,
+                        "resource_address": null,
+                        "severity": null,
+                        "bc_category": null,
+                        "benchmarks": null,
+                        "description": null,
+                        "short_description": null,
+                        "vulnerability_details": null,
+                        "connected_node": null,
+                        "guideline": "https://docs.paloaltonetworks.com/content/techdocs/en_US/prisma/prisma-cloud/prisma-cloud-code-security-policy-reference/kubernetes-policies/kubernetes-policy-index/ensure-securitycontext-is-applied-to-pods-and-containers.html",
+                        "details": [],
+                        "check_len": null,
+                        "definition_context_file_path": "/home/noh4nsen/work/actions/poc-tf-tools/project_2/resource_nginx.tf"
+                    },
+                    {
+                        "check_id": "CKV_K8S_15",
+                        "bc_check_id": "BC_K8S_14",
+                        "check_name": "Image Pull Policy should be Always",
+                        "check_result": {
+                            "result": "FAILED",
+                            "evaluated_keys": [
+                                "spec/[0]/template/[0]/spec/[0]/container/[0]"
+                            ]
+                        },
+                        "code_block": null,
+                        "file_path": "/resource_nginx.tf",
+                        "file_abs_path": "/home/noh4nsen/work/actions/poc-tf-tools/project_2/resource_nginx.tf",
+                        "repo_file_path": "/resource_nginx.tf",
+                        "file_line_range": [
+                            1,
+                            46
+                        ],
+                        "resource": "kubernetes_deployment.nginx",
+                        "evaluations": null,
+                        "check_class": "checkov.terraform.checks.resource.kubernetes.ImagePullPolicyAlways",
+                        "fixed_definition": null,
+                        "entity_tags": null,
+                        "caller_file_path": null,
+                        "caller_file_line_range": null,
+                        "resource_address": null,
+                        "severity": null,
+                        "bc_category": null,
+                        "benchmarks": null,
+                        "description": null,
+                        "short_description": null,
+                        "vulnerability_details": null,
+                        "connected_node": null,
+                        "guideline": "https://docs.paloaltonetworks.com/content/techdocs/en_US/prisma/prisma-cloud/prisma-cloud-code-security-policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-14.html",
+                        "details": [],
+                        "check_len": null,
+                        "definition_context_file_path": "/home/noh4nsen/work/actions/poc-tf-tools/project_2/resource_nginx.tf"
+                    },
+                    {
+                        "check_id": "CKV_K8S_30",
+                        "bc_check_id": "BC_K8S_28",
+                        "check_name": "Apply security context to your pods and containers",
+                        "check_result": {
+                            "result": "FAILED",
+                            "evaluated_keys": [
+                                "spec/[0]/template/[0]/spec/[0]/container/[0]/security_context"
+                            ]
+                        },
+                        "code_block": null,
+                        "file_path": "/resource_nginx.tf",
+                        "file_abs_path": "/home/noh4nsen/work/actions/poc-tf-tools/project_2/resource_nginx.tf",
+                        "repo_file_path": "/resource_nginx.tf",
+                        "file_line_range": [
+                            1,
+                            46
+                        ],
+                        "resource": "kubernetes_deployment.nginx",
+                        "evaluations": null,
+                        "check_class": "checkov.terraform.checks.resource.kubernetes.ContainerSecurityContext",
+                        "fixed_definition": null,
+                        "entity_tags": null,
+                        "caller_file_path": null,
+                        "caller_file_line_range": null,
+                        "resource_address": null,
+                        "severity": null,
+                        "bc_category": null,
+                        "benchmarks": null,
+                        "description": null,
+                        "short_description": null,
+                        "vulnerability_details": null,
+                        "connected_node": null,
+                        "guideline": "https://docs.paloaltonetworks.com/content/techdocs/en_US/prisma/prisma-cloud/prisma-cloud-code-security-policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-28.html",
+                        "details": [],
+                        "check_len": null,
+                        "definition_context_file_path": "/home/noh4nsen/work/actions/poc-tf-tools/project_2/resource_nginx.tf"
+                    },
+                    {
+                        "check_id": "CKV_K8S_8",
+                        "bc_check_id": "BC_K8S_7",
+                        "check_name": "Liveness Probe Should be Configured",
+                        "check_result": {
+                            "result": "FAILED",
+                            "evaluated_keys": [
+                                "spec/[0]/container/[0]/liveness_probe/[0]"
+                            ]
+                        },
+                        "code_block": null,
+                        "file_path": "/resource_nginx.tf",
+                        "file_abs_path": "/home/noh4nsen/work/actions/poc-tf-tools/project_2/resource_nginx.tf",
+                        "repo_file_path": "/resource_nginx.tf",
+                        "file_line_range": [
+                            1,
+                            46
+                        ],
+                        "resource": "kubernetes_deployment.nginx",
+                        "evaluations": null,
+                        "check_class": "checkov.terraform.checks.resource.kubernetes.LivenessProbe",
+                        "fixed_definition": null,
+                        "entity_tags": null,
+                        "caller_file_path": null,
+                        "caller_file_line_range": null,
+                        "resource_address": null,
+                        "severity": null,
+                        "bc_category": null,
+                        "benchmarks": null,
+                        "description": null,
+                        "short_description": null,
+                        "vulnerability_details": null,
+                        "connected_node": null,
+                        "guideline": "https://docs.paloaltonetworks.com/content/techdocs/en_US/prisma/prisma-cloud/prisma-cloud-code-security-policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-7.html",
+                        "details": [],
+                        "check_len": null,
+                        "definition_context_file_path": "/home/noh4nsen/work/actions/poc-tf-tools/project_2/resource_nginx.tf"
+                    },
+                    {
+                        "check_id": "CKV_K8S_43",
+                        "bc_check_id": "BC_K8S_39",
+                        "check_name": "Image should use digest",
+                        "check_result": {
+                            "result": "FAILED",
+                            "evaluated_keys": [
+                                "spec/[0]/template/[0]/spec/[0]/container/[0]/image"
+                            ]
+                        },
+                        "code_block": null,
+                        "file_path": "/resource_nginx.tf",
+                        "file_abs_path": "/home/noh4nsen/work/actions/poc-tf-tools/project_2/resource_nginx.tf",
+                        "repo_file_path": "/resource_nginx.tf",
+                        "file_line_range": [
+                            1,
+                            46
+                        ],
+                        "resource": "kubernetes_deployment.nginx",
+                        "evaluations": null,
+                        "check_class": "checkov.terraform.checks.resource.kubernetes.ImageDigest",
+                        "fixed_definition": null,
+                        "entity_tags": null,
+                        "caller_file_path": null,
+                        "caller_file_line_range": null,
+                        "resource_address": null,
+                        "severity": null,
+                        "bc_category": null,
+                        "benchmarks": null,
+                        "description": null,
+                        "short_description": null,
+                        "vulnerability_details": null,
+                        "connected_node": null,
+                        "guideline": "https://docs.paloaltonetworks.com/content/techdocs/en_US/prisma/prisma-cloud/prisma-cloud-code-security-policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-39.html",
+                        "details": [],
+                        "check_len": null,
+                        "definition_context_file_path": "/home/noh4nsen/work/actions/poc-tf-tools/project_2/resource_nginx.tf"
+                    }
+                ]
+            },
+            "summary": {
+                "passed": 21,
+                "failed": 7,
+                "skipped": 0,
+                "parsing_errors": 0,
+                "resource_count": 3,
+                "checkov_version": "2.4.2"
+            }
+        }
+    }
+]
