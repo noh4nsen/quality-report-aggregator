@@ -17,7 +17,7 @@ func main() {
 	var tfsecReports []model.Tfsec
 
 	fmt.Println("TFLINT REPORTS:")
-	if err := json.Unmarshal([]byte(os.Args[1]), &tflintReports); err != nil {
+	if err := json.Unmarshal([]byte(fmt.Sprintf(`%s`, os.Args[1])), &tflintReports); err != nil {
 		log.Fatal(err)
 	}
 
@@ -26,7 +26,7 @@ func main() {
 	}
 
 	fmt.Println("TFSEC REPORTS:")
-	if err := json.Unmarshal([]byte(os.Args[2]), &tfsecReports); err != nil {
+	if err := json.Unmarshal([]byte(fmt.Sprintf(`%s`, os.Args[2])), &tfsecReports); err != nil {
 		log.Fatal(err)
 	}
 
@@ -35,7 +35,7 @@ func main() {
 	}
 
 	fmt.Println("CHECKOV REPORTS:")
-	if err := json.Unmarshal([]byte(os.Args[3]), &checkovReports); err != nil {
+	if err := json.Unmarshal([]byte(fmt.Sprintf(`%s`, os.Args[3])), &checkovReports); err != nil {
 		log.Fatal(err)
 	}
 
