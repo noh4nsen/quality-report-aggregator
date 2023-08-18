@@ -6,12 +6,12 @@ type Checkov struct {
 }
 
 type CheckovReport struct {
-	CheckType string  `json:"check_type"`
-	Results   Result  `json:"results"`
-	Summary   Summary `json:"summary"`
+	CheckType string        `json:"check_type"`
+	Results   CheckovResult `json:"results"`
+	Summary   Summary       `json:"summary"`
 }
 
-type Result struct {
+type CheckovResult struct {
 	FailedChecks []FailedCheck `json:"failed_checks"`
 }
 

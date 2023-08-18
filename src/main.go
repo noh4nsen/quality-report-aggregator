@@ -14,6 +14,7 @@ func main() {
 
 	var tflintReports []model.Tflint
 	var checkovReports []model.Checkov
+	var tfsecReports []model.Tfsec
 
 	fmt.Println("TFLINT REPORTS:")
 	if err := json.Unmarshal([]byte(os.Args[1]), &tflintReports); err != nil {
@@ -21,6 +22,15 @@ func main() {
 	}
 
 	for _, obj := range tflintReports {
+		fmt.Println(obj)
+	}
+
+	fmt.Println("TFSEC REPORTS:")
+	if err := json.Unmarshal([]byte(os.Args[2]), &tfsecReports); err != nil {
+		log.Fatal(err)
+	}
+
+	for _, obj := range tfsecReports {
 		fmt.Println(obj)
 	}
 

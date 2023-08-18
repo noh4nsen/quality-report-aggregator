@@ -1,22 +1,22 @@
 package model
 
 type Tflint struct {
-	Project string
-	Report  TflintReport
+	Project string       `json:"project"`
+	Report  TflintReport `json:"report"`
 }
 
 type TflintReport struct {
-	Errors []string
-	Issues []Issue
+	Errors []string `json:"errors"`
+	Issues []Issue  `json:"issues"`
 }
 
 type Issue struct {
-	Message string
-	Rule    Rule
+	Message string `json:"message"`
+	Rule    Rule   `json:"rule"`
 }
 
 type Rule struct {
-	Link     string
-	Name     string
-	Severity string
+	Link     string `json:"link"`
+	Name     string `json:"name"`
+	Severity string `json:"severity"`
 }
