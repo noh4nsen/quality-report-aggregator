@@ -1,0 +1,974 @@
+[{
+	"project": ".github",
+	"report": {
+		"check_type": "github_actions",
+		"results": {
+			"failed_checks": [{
+				"check_id": "CKV2_GHA_1",
+				"bc_check_id": null,
+				"check_name": "Ensure top-level permissions are not set to write-all",
+				"check_result": {
+					"result": "FAILED",
+					"evaluated_keys": ["permissions"]
+				},
+				"code_block": null,
+				"file_path": "/workflows/report.yml",
+				"file_abs_path": "/home/noh4nsen/work/actions/poc-tf-tools/.github/workflows/report.yml",
+				"repo_file_path": "/workflows/report.yml",
+				"file_line_range": [0, 1],
+				"resource": "on(reports)",
+				"evaluations": null,
+				"check_class": "checkov.common.graph.checks_infra.base_check",
+				"fixed_definition": null,
+				"entity_tags": null,
+				"caller_file_path": null,
+				"caller_file_line_range": null,
+				"resource_address": null,
+				"severity": null,
+				"bc_category": null,
+				"benchmarks": null,
+				"description": null,
+				"short_description": null,
+				"vulnerability_details": null,
+				"connected_node": null,
+				"guideline": null,
+				"details": [],
+				"check_len": null,
+				"definition_context_file_path": null,
+				"triggers": [
+					[]
+				],
+				"job": [""],
+				"workflow_name": "reports"
+			}]
+		},
+		"summary": {
+			"passed": 59,
+			"failed": 1,
+			"skipped": 0,
+			"parsing_errors": 0,
+			"resource_count": 0,
+			"checkov_version": "2.4.2"
+		}
+	}
+}, {
+	"project": "project_1",
+	"report": {
+		"passed": 0,
+		"failed": 0,
+		"skipped": 0,
+		"parsing_errors": 0,
+		"resource_count": 0,
+		"checkov_version": "2.4.2"
+	}
+}, {
+	"project": "project_2",
+	"report": {
+		"check_type": "terraform",
+		"results": {
+			"failed_checks": [{
+				"check_id": "CKV_K8S_28",
+				"bc_check_id": "BC_K8S_27",
+				"check_name": "Minimize the admission of containers with the NET_RAW capability",
+				"check_result": {
+					"result": "FAILED",
+					"evaluated_keys": ["spec/[0]/template/[0]/spec/[0]/container/0"]
+				},
+				"code_block": null,
+				"file_path": "/resource_nginx.tf",
+				"file_abs_path": "/home/noh4nsen/work/actions/poc-tf-tools/project_2/resource_nginx.tf",
+				"repo_file_path": "/resource_nginx.tf",
+				"file_line_range": [1, 46],
+				"resource": "kubernetes_deployment.nginx",
+				"evaluations": null,
+				"check_class": "checkov.terraform.checks.resource.kubernetes.DropCapabilities",
+				"fixed_definition": null,
+				"entity_tags": null,
+				"caller_file_path": null,
+				"caller_file_line_range": null,
+				"resource_address": null,
+				"severity": null,
+				"bc_category": null,
+				"benchmarks": null,
+				"description": null,
+				"short_description": null,
+				"vulnerability_details": null,
+				"connected_node": null,
+				"guideline": "https://docs.paloaltonetworks.com/content/techdocs/en_US/prisma/prisma-cloud/prisma-cloud-code-security-policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-27.html",
+				"details": [],
+				"check_len": null,
+				"definition_context_file_path": "/home/noh4nsen/work/actions/poc-tf-tools/project_2/resource_nginx.tf"
+			}, {
+				"check_id": "CKV_K8S_9",
+				"bc_check_id": "BC_K8S_8",
+				"check_name": "Readiness Probe Should be Configured",
+				"check_result": {
+					"result": "FAILED",
+					"evaluated_keys": ["spec/[0]/template/[0]/spec/[0]/container/[0]/readiness_probe/[0]"]
+				},
+				"code_block": null,
+				"file_path": "/resource_nginx.tf",
+				"file_abs_path": "/home/noh4nsen/work/actions/poc-tf-tools/project_2/resource_nginx.tf",
+				"repo_file_path": "/resource_nginx.tf",
+				"file_line_range": [1, 46],
+				"resource": "kubernetes_deployment.nginx",
+				"evaluations": null,
+				"check_class": "checkov.terraform.checks.resource.kubernetes.ReadinessProbe",
+				"fixed_definition": null,
+				"entity_tags": null,
+				"caller_file_path": null,
+				"caller_file_line_range": null,
+				"resource_address": null,
+				"severity": null,
+				"bc_category": null,
+				"benchmarks": null,
+				"description": null,
+				"short_description": null,
+				"vulnerability_details": null,
+				"connected_node": null,
+				"guideline": "https://docs.paloaltonetworks.com/content/techdocs/en_US/prisma/prisma-cloud/prisma-cloud-code-security-policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-8.html",
+				"details": [],
+				"check_len": null,
+				"definition_context_file_path": "/home/noh4nsen/work/actions/poc-tf-tools/project_2/resource_nginx.tf"
+			}, {
+				"check_id": "CKV_K8S_29",
+				"bc_check_id": "BC_K8S_43",
+				"check_name": "Apply security context to your pods, deployments and daemon_sets",
+				"check_result": {
+					"result": "FAILED",
+					"evaluated_keys": ["spec/[0]/template/[0]/spec/[0]/container/0"]
+				},
+				"code_block": null,
+				"file_path": "/resource_nginx.tf",
+				"file_abs_path": "/home/noh4nsen/work/actions/poc-tf-tools/project_2/resource_nginx.tf",
+				"repo_file_path": "/resource_nginx.tf",
+				"file_line_range": [1, 46],
+				"resource": "kubernetes_deployment.nginx",
+				"evaluations": null,
+				"check_class": "checkov.terraform.checks.resource.kubernetes.PodSecurityContext",
+				"fixed_definition": null,
+				"entity_tags": null,
+				"caller_file_path": null,
+				"caller_file_line_range": null,
+				"resource_address": null,
+				"severity": null,
+				"bc_category": null,
+				"benchmarks": null,
+				"description": null,
+				"short_description": null,
+				"vulnerability_details": null,
+				"connected_node": null,
+				"guideline": "https://docs.paloaltonetworks.com/content/techdocs/en_US/prisma/prisma-cloud/prisma-cloud-code-security-policy-reference/kubernetes-policies/kubernetes-policy-index/ensure-securitycontext-is-applied-to-pods-and-containers.html",
+				"details": [],
+				"check_len": null,
+				"definition_context_file_path": "/home/noh4nsen/work/actions/poc-tf-tools/project_2/resource_nginx.tf"
+			}, {
+				"check_id": "CKV_K8S_15",
+				"bc_check_id": "BC_K8S_14",
+				"check_name": "Image Pull Policy should be Always",
+				"check_result": {
+					"result": "FAILED",
+					"evaluated_keys": ["spec/[0]/template/[0]/spec/[0]/container/[0]"]
+				},
+				"code_block": null,
+				"file_path": "/resource_nginx.tf",
+				"file_abs_path": "/home/noh4nsen/work/actions/poc-tf-tools/project_2/resource_nginx.tf",
+				"repo_file_path": "/resource_nginx.tf",
+				"file_line_range": [1, 46],
+				"resource": "kubernetes_deployment.nginx",
+				"evaluations": null,
+				"check_class": "checkov.terraform.checks.resource.kubernetes.ImagePullPolicyAlways",
+				"fixed_definition": null,
+				"entity_tags": null,
+				"caller_file_path": null,
+				"caller_file_line_range": null,
+				"resource_address": null,
+				"severity": null,
+				"bc_category": null,
+				"benchmarks": null,
+				"description": null,
+				"short_description": null,
+				"vulnerability_details": null,
+				"connected_node": null,
+				"guideline": "https://docs.paloaltonetworks.com/content/techdocs/en_US/prisma/prisma-cloud/prisma-cloud-code-security-policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-14.html",
+				"details": [],
+				"check_len": null,
+				"definition_context_file_path": "/home/noh4nsen/work/actions/poc-tf-tools/project_2/resource_nginx.tf"
+			}, {
+				"check_id": "CKV_K8S_30",
+				"bc_check_id": "BC_K8S_28",
+				"check_name": "Apply security context to your pods and containers",
+				"check_result": {
+					"result": "FAILED",
+					"evaluated_keys": ["spec/[0]/template/[0]/spec/[0]/container/[0]/security_context"]
+				},
+				"code_block": null,
+				"file_path": "/resource_nginx.tf",
+				"file_abs_path": "/home/noh4nsen/work/actions/poc-tf-tools/project_2/resource_nginx.tf",
+				"repo_file_path": "/resource_nginx.tf",
+				"file_line_range": [1, 46],
+				"resource": "kubernetes_deployment.nginx",
+				"evaluations": null,
+				"check_class": "checkov.terraform.checks.resource.kubernetes.ContainerSecurityContext",
+				"fixed_definition": null,
+				"entity_tags": null,
+				"caller_file_path": null,
+				"caller_file_line_range": null,
+				"resource_address": null,
+				"severity": null,
+				"bc_category": null,
+				"benchmarks": null,
+				"description": null,
+				"short_description": null,
+				"vulnerability_details": null,
+				"connected_node": null,
+				"guideline": "https://docs.paloaltonetworks.com/content/techdocs/en_US/prisma/prisma-cloud/prisma-cloud-code-security-policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-28.html",
+				"details": [],
+				"check_len": null,
+				"definition_context_file_path": "/home/noh4nsen/work/actions/poc-tf-tools/project_2/resource_nginx.tf"
+			}, {
+				"check_id": "CKV_K8S_8",
+				"bc_check_id": "BC_K8S_7",
+				"check_name": "Liveness Probe Should be Configured",
+				"check_result": {
+					"result": "FAILED",
+					"evaluated_keys": ["spec/[0]/container/[0]/liveness_probe/[0]"]
+				},
+				"code_block": null,
+				"file_path": "/resource_nginx.tf",
+				"file_abs_path": "/home/noh4nsen/work/actions/poc-tf-tools/project_2/resource_nginx.tf",
+				"repo_file_path": "/resource_nginx.tf",
+				"file_line_range": [1, 46],
+				"resource": "kubernetes_deployment.nginx",
+				"evaluations": null,
+				"check_class": "checkov.terraform.checks.resource.kubernetes.LivenessProbe",
+				"fixed_definition": null,
+				"entity_tags": null,
+				"caller_file_path": null,
+				"caller_file_line_range": null,
+				"resource_address": null,
+				"severity": null,
+				"bc_category": null,
+				"benchmarks": null,
+				"description": null,
+				"short_description": null,
+				"vulnerability_details": null,
+				"connected_node": null,
+				"guideline": "https://docs.paloaltonetworks.com/content/techdocs/en_US/prisma/prisma-cloud/prisma-cloud-code-security-policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-7.html",
+				"details": [],
+				"check_len": null,
+				"definition_context_file_path": "/home/noh4nsen/work/actions/poc-tf-tools/project_2/resource_nginx.tf"
+			}, {
+				"check_id": "CKV_K8S_43",
+				"bc_check_id": "BC_K8S_39",
+				"check_name": "Image should use digest",
+				"check_result": {
+					"result": "FAILED",
+					"evaluated_keys": ["spec/[0]/template/[0]/spec/[0]/container/[0]/image"]
+				},
+				"code_block": null,
+				"file_path": "/resource_nginx.tf",
+				"file_abs_path": "/home/noh4nsen/work/actions/poc-tf-tools/project_2/resource_nginx.tf",
+				"repo_file_path": "/resource_nginx.tf",
+				"file_line_range": [1, 46],
+				"resource": "kubernetes_deployment.nginx",
+				"evaluations": null,
+				"check_class": "checkov.terraform.checks.resource.kubernetes.ImageDigest",
+				"fixed_definition": null,
+				"entity_tags": null,
+				"caller_file_path": null,
+				"caller_file_line_range": null,
+				"resource_address": null,
+				"severity": null,
+				"bc_category": null,
+				"benchmarks": null,
+				"description": null,
+				"short_description": null,
+				"vulnerability_details": null,
+				"connected_node": null,
+				"guideline": "https://docs.paloaltonetworks.com/content/techdocs/en_US/prisma/prisma-cloud/prisma-cloud-code-security-policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-39.html",
+				"details": [],
+				"check_len": null,
+				"definition_context_file_path": "/home/noh4nsen/work/actions/poc-tf-tools/project_2/resource_nginx.tf"
+			}]
+		},
+		"summary": {
+			"passed": 21,
+			"failed": 7,
+			"skipped": 0,
+			"parsing_errors": 0,
+			"resource_count": 3,
+			"checkov_version": "2.4.2"
+		}
+	}
+}, {
+	"project": "project_3",
+	"report": {
+		"check_type": "terraform",
+		"results": {
+			"failed_checks": [{
+				"check_id": "CKV_AWS_126",
+				"bc_check_id": "BC_AWS_LOGGING_26",
+				"check_name": "Ensure that detailed monitoring is enabled for EC2 instances",
+				"check_result": {
+					"result": "FAILED",
+					"evaluated_keys": ["monitoring"]
+				},
+				"code_block": null,
+				"file_path": "/main.tf",
+				"file_abs_path": "/home/noh4nsen/work/actions/poc-tf-tools/project_3/main.tf",
+				"repo_file_path": "/main.tf",
+				"file_line_range": [26, 36],
+				"resource": "aws_instance.web",
+				"evaluations": null,
+				"check_class": "checkov.terraform.checks.resource.aws.EC2DetailedMonitoringEnabled",
+				"fixed_definition": null,
+				"entity_tags": null,
+				"caller_file_path": null,
+				"caller_file_line_range": null,
+				"resource_address": null,
+				"severity": null,
+				"bc_category": null,
+				"benchmarks": null,
+				"description": null,
+				"short_description": null,
+				"vulnerability_details": null,
+				"connected_node": null,
+				"guideline": "https://docs.paloaltonetworks.com/content/techdocs/en_US/prisma/prisma-cloud/prisma-cloud-code-security-policy-reference/aws-policies/aws-logging-policies/ensure-that-detailed-monitoring-is-enabled-for-ec2-instances.html",
+				"details": [],
+				"check_len": null,
+				"definition_context_file_path": "/home/noh4nsen/work/actions/poc-tf-tools/project_3/main.tf"
+			}, {
+				"check_id": "CKV_AWS_8",
+				"bc_check_id": "BC_AWS_GENERAL_13",
+				"check_name": "Ensure all data stored in the Launch configuration or instance Elastic Blocks Store is securely encrypted",
+				"check_result": {
+					"result": "FAILED",
+					"evaluated_keys": ["root_block_device"]
+				},
+				"code_block": null,
+				"file_path": "/main.tf",
+				"file_abs_path": "/home/noh4nsen/work/actions/poc-tf-tools/project_3/main.tf",
+				"repo_file_path": "/main.tf",
+				"file_line_range": [26, 36],
+				"resource": "aws_instance.web",
+				"evaluations": null,
+				"check_class": "checkov.terraform.checks.resource.aws.LaunchConfigurationEBSEncryption",
+				"fixed_definition": null,
+				"entity_tags": null,
+				"caller_file_path": null,
+				"caller_file_line_range": null,
+				"resource_address": null,
+				"severity": null,
+				"bc_category": null,
+				"benchmarks": null,
+				"description": null,
+				"short_description": null,
+				"vulnerability_details": null,
+				"connected_node": null,
+				"guideline": "https://docs.paloaltonetworks.com/content/techdocs/en_US/prisma/prisma-cloud/prisma-cloud-code-security-policy-reference/aws-policies/aws-general-policies/general-13.html",
+				"details": [],
+				"check_len": null,
+				"definition_context_file_path": "/home/noh4nsen/work/actions/poc-tf-tools/project_3/main.tf"
+			}, {
+				"check_id": "CKV_AWS_79",
+				"bc_check_id": "BC_AWS_GENERAL_31",
+				"check_name": "Ensure Instance Metadata Service Version 1 is not enabled",
+				"check_result": {
+					"result": "FAILED",
+					"evaluated_keys": ["metadata_options/[0]/http_tokens", "metadata_options/[0]/http_endpoint"]
+				},
+				"code_block": null,
+				"file_path": "/main.tf",
+				"file_abs_path": "/home/noh4nsen/work/actions/poc-tf-tools/project_3/main.tf",
+				"repo_file_path": "/main.tf",
+				"file_line_range": [26, 36],
+				"resource": "aws_instance.web",
+				"evaluations": null,
+				"check_class": "checkov.terraform.checks.resource.aws.IMDSv1Disabled",
+				"fixed_definition": null,
+				"entity_tags": null,
+				"caller_file_path": null,
+				"caller_file_line_range": null,
+				"resource_address": null,
+				"severity": null,
+				"bc_category": null,
+				"benchmarks": null,
+				"description": null,
+				"short_description": null,
+				"vulnerability_details": null,
+				"connected_node": null,
+				"guideline": "https://docs.paloaltonetworks.com/content/techdocs/en_US/prisma/prisma-cloud/prisma-cloud-code-security-policy-reference/aws-policies/aws-general-policies/bc-aws-general-31.html",
+				"details": [],
+				"check_len": null,
+				"definition_context_file_path": "/home/noh4nsen/work/actions/poc-tf-tools/project_3/main.tf"
+			}, {
+				"check_id": "CKV_AWS_135",
+				"bc_check_id": "BC_AWS_GENERAL_68",
+				"check_name": "Ensure that EC2 is EBS optimized",
+				"check_result": {
+					"result": "FAILED",
+					"evaluated_keys": ["ebs_optimized"]
+				},
+				"code_block": null,
+				"file_path": "/main.tf",
+				"file_abs_path": "/home/noh4nsen/work/actions/poc-tf-tools/project_3/main.tf",
+				"repo_file_path": "/main.tf",
+				"file_line_range": [26, 36],
+				"resource": "aws_instance.web",
+				"evaluations": null,
+				"check_class": "checkov.terraform.checks.resource.aws.EC2EBSOptimized",
+				"fixed_definition": null,
+				"entity_tags": null,
+				"caller_file_path": null,
+				"caller_file_line_range": null,
+				"resource_address": null,
+				"severity": null,
+				"bc_category": null,
+				"benchmarks": null,
+				"description": null,
+				"short_description": null,
+				"vulnerability_details": null,
+				"connected_node": null,
+				"guideline": "https://docs.paloaltonetworks.com/content/techdocs/en_US/prisma/prisma-cloud/prisma-cloud-code-security-policy-reference/aws-policies/aws-general-policies/ensure-that-ec2-is-ebs-optimized.html",
+				"details": [],
+				"check_len": null,
+				"definition_context_file_path": "/home/noh4nsen/work/actions/poc-tf-tools/project_3/main.tf"
+			}, {
+				"check_id": "CKV_AWS_23",
+				"bc_check_id": "BC_AWS_NETWORKING_31",
+				"check_name": "Ensure every security groups rule has a description",
+				"check_result": {
+					"result": "FAILED",
+					"evaluated_keys": ["ingress/[0]"]
+				},
+				"code_block": null,
+				"file_path": "/main.tf",
+				"file_abs_path": "/home/noh4nsen/work/actions/poc-tf-tools/project_3/main.tf",
+				"repo_file_path": "/main.tf",
+				"file_line_range": [38, 46],
+				"resource": "aws_security_group.web-sg",
+				"evaluations": null,
+				"check_class": "checkov.terraform.checks.resource.aws.SecurityGroupRuleDescription",
+				"fixed_definition": null,
+				"entity_tags": null,
+				"caller_file_path": null,
+				"caller_file_line_range": null,
+				"resource_address": null,
+				"severity": null,
+				"bc_category": null,
+				"benchmarks": null,
+				"description": null,
+				"short_description": null,
+				"vulnerability_details": null,
+				"connected_node": null,
+				"guideline": "https://docs.paloaltonetworks.com/content/techdocs/en_US/prisma/prisma-cloud/prisma-cloud-code-security-policy-reference/aws-policies/aws-networking-policies/networking-31.html",
+				"details": [],
+				"check_len": null,
+				"definition_context_file_path": "/home/noh4nsen/work/actions/poc-tf-tools/project_3/main.tf"
+			}, {
+				"check_id": "CKV2_AWS_41",
+				"bc_check_id": "BC_AWS_IAM_69",
+				"check_name": "Ensure an IAM role is attached to EC2 instance",
+				"check_result": {
+					"result": "FAILED",
+					"entity": {
+						"aws_instance": {
+							"web": {
+								"__end_line__": 36,
+								"__start_line__": 26,
+								"ami": ["ami-09e67e426f25cd0d7"],
+								"instance_type": ["t2.micro"],
+								"user_data": ["#!/bin/bash\necho \"Hello World\" > index.html\nnohup busybox httpd -f -p 8080 &"],
+								"vpc_security_group_ids": [
+									["aws_security_group.web-sg.id"]
+								],
+								"__address__": "aws_instance.web"
+							}
+						}
+					},
+					"evaluated_keys": ["iam_instance_profile"]
+				},
+				"code_block": null,
+				"file_path": "/main.tf",
+				"file_abs_path": "/home/noh4nsen/work/actions/poc-tf-tools/project_3/main.tf",
+				"repo_file_path": "/main.tf",
+				"file_line_range": [26, 36],
+				"resource": "aws_instance.web",
+				"evaluations": null,
+				"check_class": "checkov.common.graph.checks_infra.base_check",
+				"fixed_definition": null,
+				"entity_tags": {},
+				"caller_file_path": null,
+				"caller_file_line_range": null,
+				"resource_address": null,
+				"severity": null,
+				"bc_category": null,
+				"benchmarks": null,
+				"description": null,
+				"short_description": null,
+				"vulnerability_details": null,
+				"connected_node": null,
+				"guideline": "https://docs.paloaltonetworks.com/content/techdocs/en_US/prisma/prisma-cloud/prisma-cloud-code-security-policy-reference/aws-policies/aws-iam-policies/ensure-an-iam-role-is-attached-to-ec2-instance.html",
+				"details": [],
+				"check_len": null,
+				"definition_context_file_path": "/home/noh4nsen/work/actions/poc-tf-tools/project_3/main.tf"
+			}]
+		},
+		"summary": {
+			"passed": 8,
+			"failed": 6,
+			"skipped": 0,
+			"parsing_errors": 0,
+			"resource_count": 3,
+			"checkov_version": "2.4.2"
+		}
+	}
+}, {
+	"project": "project_4",
+	"report": {
+		"check_type": "terraform",
+		"results": {
+			"failed_checks": [{
+				"check_id": "CKV_AWS_126",
+				"bc_check_id": "BC_AWS_LOGGING_26",
+				"check_name": "Ensure that detailed monitoring is enabled for EC2 instances",
+				"check_result": {
+					"result": "FAILED",
+					"evaluated_keys": ["monitoring"]
+				},
+				"code_block": null,
+				"file_path": "/main.tf",
+				"file_abs_path": "/home/noh4nsen/work/actions/poc-tf-tools/project_4/main.tf",
+				"repo_file_path": "/main.tf",
+				"file_line_range": [1, 24],
+				"resource": "aws_instance.webserver",
+				"evaluations": null,
+				"check_class": "checkov.terraform.checks.resource.aws.EC2DetailedMonitoringEnabled",
+				"fixed_definition": null,
+				"entity_tags": {
+					"Name": ["webserver"]
+				},
+				"caller_file_path": null,
+				"caller_file_line_range": null,
+				"resource_address": null,
+				"severity": null,
+				"bc_category": null,
+				"benchmarks": null,
+				"description": null,
+				"short_description": null,
+				"vulnerability_details": null,
+				"connected_node": null,
+				"guideline": "https://docs.paloaltonetworks.com/content/techdocs/en_US/prisma/prisma-cloud/prisma-cloud-code-security-policy-reference/aws-policies/aws-logging-policies/ensure-that-detailed-monitoring-is-enabled-for-ec2-instances.html",
+				"details": [],
+				"check_len": null,
+				"definition_context_file_path": "/home/noh4nsen/work/actions/poc-tf-tools/project_4/main.tf"
+			}, {
+				"check_id": "CKV_AWS_8",
+				"bc_check_id": "BC_AWS_GENERAL_13",
+				"check_name": "Ensure all data stored in the Launch configuration or instance Elastic Blocks Store is securely encrypted",
+				"check_result": {
+					"result": "FAILED",
+					"evaluated_keys": ["root_block_device"]
+				},
+				"code_block": null,
+				"file_path": "/main.tf",
+				"file_abs_path": "/home/noh4nsen/work/actions/poc-tf-tools/project_4/main.tf",
+				"repo_file_path": "/main.tf",
+				"file_line_range": [1, 24],
+				"resource": "aws_instance.webserver",
+				"evaluations": null,
+				"check_class": "checkov.terraform.checks.resource.aws.LaunchConfigurationEBSEncryption",
+				"fixed_definition": null,
+				"entity_tags": {
+					"Name": ["webserver"]
+				},
+				"caller_file_path": null,
+				"caller_file_line_range": null,
+				"resource_address": null,
+				"severity": null,
+				"bc_category": null,
+				"benchmarks": null,
+				"description": null,
+				"short_description": null,
+				"vulnerability_details": null,
+				"connected_node": null,
+				"guideline": "https://docs.paloaltonetworks.com/content/techdocs/en_US/prisma/prisma-cloud/prisma-cloud-code-security-policy-reference/aws-policies/aws-general-policies/general-13.html",
+				"details": [],
+				"check_len": null,
+				"definition_context_file_path": "/home/noh4nsen/work/actions/poc-tf-tools/project_4/main.tf"
+			}, {
+				"check_id": "CKV_AWS_79",
+				"bc_check_id": "BC_AWS_GENERAL_31",
+				"check_name": "Ensure Instance Metadata Service Version 1 is not enabled",
+				"check_result": {
+					"result": "FAILED",
+					"evaluated_keys": ["metadata_options/[0]/http_tokens", "metadata_options/[0]/http_endpoint"]
+				},
+				"code_block": null,
+				"file_path": "/main.tf",
+				"file_abs_path": "/home/noh4nsen/work/actions/poc-tf-tools/project_4/main.tf",
+				"repo_file_path": "/main.tf",
+				"file_line_range": [1, 24],
+				"resource": "aws_instance.webserver",
+				"evaluations": null,
+				"check_class": "checkov.terraform.checks.resource.aws.IMDSv1Disabled",
+				"fixed_definition": null,
+				"entity_tags": {
+					"Name": ["webserver"]
+				},
+				"caller_file_path": null,
+				"caller_file_line_range": null,
+				"resource_address": null,
+				"severity": null,
+				"bc_category": null,
+				"benchmarks": null,
+				"description": null,
+				"short_description": null,
+				"vulnerability_details": null,
+				"connected_node": null,
+				"guideline": "https://docs.paloaltonetworks.com/content/techdocs/en_US/prisma/prisma-cloud/prisma-cloud-code-security-policy-reference/aws-policies/aws-general-policies/bc-aws-general-31.html",
+				"details": [],
+				"check_len": null,
+				"definition_context_file_path": "/home/noh4nsen/work/actions/poc-tf-tools/project_4/main.tf"
+			}, {
+				"check_id": "CKV_AWS_135",
+				"bc_check_id": "BC_AWS_GENERAL_68",
+				"check_name": "Ensure that EC2 is EBS optimized",
+				"check_result": {
+					"result": "FAILED",
+					"evaluated_keys": ["ebs_optimized"]
+				},
+				"code_block": null,
+				"file_path": "/main.tf",
+				"file_abs_path": "/home/noh4nsen/work/actions/poc-tf-tools/project_4/main.tf",
+				"repo_file_path": "/main.tf",
+				"file_line_range": [1, 24],
+				"resource": "aws_instance.webserver",
+				"evaluations": null,
+				"check_class": "checkov.terraform.checks.resource.aws.EC2EBSOptimized",
+				"fixed_definition": null,
+				"entity_tags": {
+					"Name": ["webserver"]
+				},
+				"caller_file_path": null,
+				"caller_file_line_range": null,
+				"resource_address": null,
+				"severity": null,
+				"bc_category": null,
+				"benchmarks": null,
+				"description": null,
+				"short_description": null,
+				"vulnerability_details": null,
+				"connected_node": null,
+				"guideline": "https://docs.paloaltonetworks.com/content/techdocs/en_US/prisma/prisma-cloud/prisma-cloud-code-security-policy-reference/aws-policies/aws-general-policies/ensure-that-ec2-is-ebs-optimized.html",
+				"details": [],
+				"check_len": null,
+				"definition_context_file_path": "/home/noh4nsen/work/actions/poc-tf-tools/project_4/main.tf"
+			}, {
+				"check_id": "CKV_AWS_88",
+				"bc_check_id": "BC_AWS_PUBLIC_12",
+				"check_name": "EC2 instance should not have public IP.",
+				"check_result": {
+					"result": "FAILED",
+					"evaluated_keys": ["associate_public_ip_address"]
+				},
+				"code_block": null,
+				"file_path": "/main.tf",
+				"file_abs_path": "/home/noh4nsen/work/actions/poc-tf-tools/project_4/main.tf",
+				"repo_file_path": "/main.tf",
+				"file_line_range": [1, 24],
+				"resource": "aws_instance.webserver",
+				"evaluations": null,
+				"check_class": "checkov.terraform.checks.resource.aws.EC2PublicIP",
+				"fixed_definition": null,
+				"entity_tags": {
+					"Name": ["webserver"]
+				},
+				"caller_file_path": null,
+				"caller_file_line_range": null,
+				"resource_address": null,
+				"severity": null,
+				"bc_category": null,
+				"benchmarks": null,
+				"description": null,
+				"short_description": null,
+				"vulnerability_details": null,
+				"connected_node": null,
+				"guideline": "https://docs.paloaltonetworks.com/content/techdocs/en_US/prisma/prisma-cloud/prisma-cloud-code-security-policy-reference/aws-policies/public-policies/public-12.html",
+				"details": [],
+				"check_len": null,
+				"definition_context_file_path": "/home/noh4nsen/work/actions/poc-tf-tools/project_4/main.tf"
+			}, {
+				"check_id": "CKV_AWS_24",
+				"bc_check_id": "BC_AWS_NETWORKING_1",
+				"check_name": "Ensure no security groups allow ingress from 0.0.0.0:0 to port 22",
+				"check_result": {
+					"result": "FAILED",
+					"evaluated_keys": ["ingress/[0]/from_port", "ingress/[0]/to_port", "ingress/[0]/cidr_blocks", "ingress/[0]/ipv6_cidr_blocks"]
+				},
+				"code_block": null,
+				"file_path": "/setup.tf",
+				"file_abs_path": "/home/noh4nsen/work/actions/poc-tf-tools/project_4/setup.tf",
+				"repo_file_path": "/setup.tf",
+				"file_line_range": [59, 83],
+				"resource": "aws_security_group.sg",
+				"evaluations": null,
+				"check_class": "checkov.terraform.checks.resource.aws.SecurityGroupUnrestrictedIngress22",
+				"fixed_definition": null,
+				"entity_tags": null,
+				"caller_file_path": null,
+				"caller_file_line_range": null,
+				"resource_address": null,
+				"severity": null,
+				"bc_category": null,
+				"benchmarks": null,
+				"description": null,
+				"short_description": null,
+				"vulnerability_details": null,
+				"connected_node": null,
+				"guideline": "https://docs.paloaltonetworks.com/content/techdocs/en_US/prisma/prisma-cloud/prisma-cloud-code-security-policy-reference/aws-policies/aws-networking-policies/networking-1-port-security.html",
+				"details": [],
+				"check_len": null,
+				"definition_context_file_path": "/home/noh4nsen/work/actions/poc-tf-tools/project_4/setup.tf"
+			}, {
+				"check_id": "CKV_AWS_23",
+				"bc_check_id": "BC_AWS_NETWORKING_31",
+				"check_name": "Ensure every security groups rule has a description",
+				"check_result": {
+					"result": "FAILED",
+					"evaluated_keys": ["description", "egress/[0]"]
+				},
+				"code_block": null,
+				"file_path": "/setup.tf",
+				"file_abs_path": "/home/noh4nsen/work/actions/poc-tf-tools/project_4/setup.tf",
+				"repo_file_path": "/setup.tf",
+				"file_line_range": [59, 83],
+				"resource": "aws_security_group.sg",
+				"evaluations": null,
+				"check_class": "checkov.terraform.checks.resource.aws.SecurityGroupRuleDescription",
+				"fixed_definition": null,
+				"entity_tags": null,
+				"caller_file_path": null,
+				"caller_file_line_range": null,
+				"resource_address": null,
+				"severity": null,
+				"bc_category": null,
+				"benchmarks": null,
+				"description": null,
+				"short_description": null,
+				"vulnerability_details": null,
+				"connected_node": null,
+				"guideline": "https://docs.paloaltonetworks.com/content/techdocs/en_US/prisma/prisma-cloud/prisma-cloud-code-security-policy-reference/aws-policies/aws-networking-policies/networking-31.html",
+				"details": [],
+				"check_len": null,
+				"definition_context_file_path": "/home/noh4nsen/work/actions/poc-tf-tools/project_4/setup.tf"
+			}, {
+				"check_id": "CKV_AWS_260",
+				"bc_check_id": "BC_AWS_NETWORKING_67",
+				"check_name": "Ensure no security groups allow ingress from 0.0.0.0:0 to port 80",
+				"check_result": {
+					"result": "FAILED",
+					"evaluated_keys": ["ingress/[1]/from_port", "ingress/[1]/to_port", "ingress/[1]/cidr_blocks", "ingress/[1]/ipv6_cidr_blocks"]
+				},
+				"code_block": null,
+				"file_path": "/setup.tf",
+				"file_abs_path": "/home/noh4nsen/work/actions/poc-tf-tools/project_4/setup.tf",
+				"repo_file_path": "/setup.tf",
+				"file_line_range": [59, 83],
+				"resource": "aws_security_group.sg",
+				"evaluations": null,
+				"check_class": "checkov.terraform.checks.resource.aws.SecurityGroupUnrestrictedIngress80",
+				"fixed_definition": null,
+				"entity_tags": null,
+				"caller_file_path": null,
+				"caller_file_line_range": null,
+				"resource_address": null,
+				"severity": null,
+				"bc_category": null,
+				"benchmarks": null,
+				"description": null,
+				"short_description": null,
+				"vulnerability_details": null,
+				"connected_node": null,
+				"guideline": "https://docs.paloaltonetworks.com/content/techdocs/en_US/prisma/prisma-cloud/prisma-cloud-code-security-policy-reference/aws-policies/aws-networking-policies/ensure-aws-security-groups-do-not-allow-ingress-from-00000-to-port-80.html",
+				"details": [],
+				"check_len": null,
+				"definition_context_file_path": "/home/noh4nsen/work/actions/poc-tf-tools/project_4/setup.tf"
+			}, {
+				"check_id": "CKV2_AWS_12",
+				"bc_check_id": "BC_AWS_NETWORKING_4",
+				"check_name": "Ensure the default security group of every VPC restricts all traffic",
+				"check_result": {
+					"result": "FAILED",
+					"entity": {
+						"aws_vpc": {
+							"vpc": {
+								"__end_line__": 21,
+								"__start_line__": 14,
+								"cidr_block": ["10.0.0.0/16"],
+								"enable_dns_hostnames": [true],
+								"enable_dns_support": [true],
+								"tags": [{
+									"Name": "terraform-vpc"
+								}],
+								"__address__": "aws_vpc.vpc"
+							}
+						}
+					},
+					"evaluated_keys": ["egress/cidr_blocks", "ingress/self", "egress/to_port", "ingress/to_port", "resource_type", "ingress/from_port", "egress/protocol", "egress/from_port", "ingress/protocol"]
+				},
+				"code_block": null,
+				"file_path": "/setup.tf",
+				"file_abs_path": "/home/noh4nsen/work/actions/poc-tf-tools/project_4/setup.tf",
+				"repo_file_path": "/setup.tf",
+				"file_line_range": [14, 21],
+				"resource": "aws_vpc.vpc",
+				"evaluations": null,
+				"check_class": "checkov.common.graph.checks_infra.base_check",
+				"fixed_definition": null,
+				"entity_tags": {
+					"Name": "terraform-vpc"
+				},
+				"caller_file_path": null,
+				"caller_file_line_range": null,
+				"resource_address": null,
+				"severity": null,
+				"bc_category": null,
+				"benchmarks": null,
+				"description": null,
+				"short_description": null,
+				"vulnerability_details": null,
+				"connected_node": null,
+				"guideline": "https://docs.paloaltonetworks.com/content/techdocs/en_US/prisma/prisma-cloud/prisma-cloud-code-security-policy-reference/aws-policies/aws-networking-policies/networking-4.html",
+				"details": [],
+				"check_len": null,
+				"definition_context_file_path": "/home/noh4nsen/work/actions/poc-tf-tools/project_4/setup.tf"
+			}, {
+				"check_id": "CKV2_AWS_41",
+				"bc_check_id": "BC_AWS_IAM_69",
+				"check_name": "Ensure an IAM role is attached to EC2 instance",
+				"check_result": {
+					"result": "FAILED",
+					"entity": {
+						"aws_instance": {
+							"webserver": {
+								"__end_line__": 24,
+								"__start_line__": 1,
+								"ami": ["data.aws_ssm_parameter.webserver-ami.value"],
+								"associate_public_ip_address": [true],
+								"instance_type": ["t3.micro"],
+								"key_name": ["aws_key_pair.webserver-key"],
+								"provisioner": [{
+									"remote-exec": {
+										"connection": [{
+											"host": ["${self.public_ip}"],
+											"private_key": ["${file(\"~/.ssh/id_rsa\")}"],
+											"type": ["ssh"],
+											"user": ["ec2-user"]
+										}],
+										"inline": [
+											["echo '<h1><center>Test</center></h1>' > index.html", "sudo mv index.html /var/www/html/", "sudo yum -y install httpd && sudo systemctl start httpd"]
+										]
+									}
+								}],
+								"subnet_id": ["aws_subnet.subnet.id"],
+								"tags": [{
+									"Name": ["webserver"]
+								}],
+								"vpc_security_group_ids": [
+									["aws_security_group.sg.id"]
+								],
+								"__address__": "aws_instance.webserver"
+							}
+						}
+					},
+					"evaluated_keys": ["iam_instance_profile"]
+				},
+				"code_block": null,
+				"file_path": "/main.tf",
+				"file_abs_path": "/home/noh4nsen/work/actions/poc-tf-tools/project_4/main.tf",
+				"repo_file_path": "/main.tf",
+				"file_line_range": [1, 24],
+				"resource": "aws_instance.webserver",
+				"evaluations": null,
+				"check_class": "checkov.common.graph.checks_infra.base_check",
+				"fixed_definition": null,
+				"entity_tags": {
+					"Name": "webserver"
+				},
+				"caller_file_path": null,
+				"caller_file_line_range": null,
+				"resource_address": null,
+				"severity": null,
+				"bc_category": null,
+				"benchmarks": null,
+				"description": null,
+				"short_description": null,
+				"vulnerability_details": null,
+				"connected_node": null,
+				"guideline": "https://docs.paloaltonetworks.com/content/techdocs/en_US/prisma/prisma-cloud/prisma-cloud-code-security-policy-reference/aws-policies/aws-iam-policies/ensure-an-iam-role-is-attached-to-ec2-instance.html",
+				"details": [],
+				"check_len": null,
+				"definition_context_file_path": "/home/noh4nsen/work/actions/poc-tf-tools/project_4/main.tf"
+			}, {
+				"check_id": "CKV2_AWS_11",
+				"bc_check_id": "BC_AWS_LOGGING_9",
+				"check_name": "Ensure VPC flow logging is enabled in all VPCs",
+				"check_result": {
+					"result": "FAILED",
+					"entity": {
+						"aws_vpc": {
+							"vpc": {
+								"__end_line__": 21,
+								"__start_line__": 14,
+								"cidr_block": ["10.0.0.0/16"],
+								"enable_dns_hostnames": [true],
+								"enable_dns_support": [true],
+								"tags": [{
+									"Name": "terraform-vpc"
+								}],
+								"__address__": "aws_vpc.vpc"
+							}
+						}
+					},
+					"evaluated_keys": ["networking", "resource_type"]
+				},
+				"code_block": null,
+				"file_path": "/setup.tf",
+				"file_abs_path": "/home/noh4nsen/work/actions/poc-tf-tools/project_4/setup.tf",
+				"repo_file_path": "/setup.tf",
+				"file_line_range": [14, 21],
+				"resource": "aws_vpc.vpc",
+				"evaluations": null,
+				"check_class": "checkov.common.graph.checks_infra.base_check",
+				"fixed_definition": null,
+				"entity_tags": {
+					"Name": "terraform-vpc"
+				},
+				"caller_file_path": null,
+				"caller_file_line_range": null,
+				"resource_address": null,
+				"severity": null,
+				"bc_category": null,
+				"benchmarks": null,
+				"description": null,
+				"short_description": null,
+				"vulnerability_details": null,
+				"connected_node": null,
+				"guideline": "https://docs.paloaltonetworks.com/content/techdocs/en_US/prisma/prisma-cloud/prisma-cloud-code-security-policy-reference/aws-policies/aws-logging-policies/logging-9-enable-vpc-flow-logging.html",
+				"details": [],
+				"check_len": null,
+				"definition_context_file_path": "/home/noh4nsen/work/actions/poc-tf-tools/project_4/setup.tf"
+			}]
+		},
+		"summary": {
+			"passed": 6,
+			"failed": 11,
+			"skipped": 0,
+			"parsing_errors": 0,
+			"resource_count": 7,
+			"checkov_version": "2.4.2"
+		}
+	}
+}]

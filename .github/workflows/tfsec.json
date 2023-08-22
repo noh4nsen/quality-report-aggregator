@@ -1,0 +1,449 @@
+[{
+	"project": ".github",
+	"report": {
+		"results": []
+	}
+}, {
+	"project": ".",
+	"report": {
+		"results": [{
+			"rule_id": "AVD-AWS-0099",
+			"long_id": "aws-ec2-add-description-to-security-group",
+			"rule_description": "Missing description for security group.",
+			"rule_provider": "aws",
+			"rule_service": "ec2",
+			"impact": "Descriptions provide context for the firewall rule reasons",
+			"resolution": "Add descriptions for all security groups",
+			"links": ["https://aquasecurity.github.io/tfsec/v1.28.1/checks/aws/ec2/add-description-to-security-group/", "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/security_group", "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/security_group_rule"],
+			"description": "Security group explicitly uses the default description.",
+			"severity": "LOW",
+			"warning": false,
+			"status": 0,
+			"resource": "aws_security_group.web-sg",
+			"location": {
+				"filename": "/home/noh4nsen/work/actions/poc-tf-tools/project_3/main.tf",
+				"start_line": 38,
+				"end_line": 46
+			}
+		}, {
+			"rule_id": "AVD-AWS-0124",
+			"long_id": "aws-ec2-add-description-to-security-group-rule",
+			"rule_description": "Missing description for security group rule.",
+			"rule_provider": "aws",
+			"rule_service": "ec2",
+			"impact": "Descriptions provide context for the firewall rule reasons",
+			"resolution": "Add descriptions for all security groups rules",
+			"links": ["https://aquasecurity.github.io/tfsec/v1.28.1/checks/aws/ec2/add-description-to-security-group-rule/", "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/security_group", "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/security_group_rule"],
+			"description": "Security group rule does not have a description.",
+			"severity": "LOW",
+			"warning": false,
+			"status": 0,
+			"resource": "aws_security_group.web-sg",
+			"location": {
+				"filename": "/home/noh4nsen/work/actions/poc-tf-tools/project_3/main.tf",
+				"start_line": 40,
+				"end_line": 45
+			}
+		}, {
+			"rule_id": "AVD-AWS-0131",
+			"long_id": "aws-ec2-enable-at-rest-encryption",
+			"rule_description": "Instance with unencrypted block device.",
+			"rule_provider": "aws",
+			"rule_service": "ec2",
+			"impact": "The block device could be compromised and read from",
+			"resolution": "Turn on encryption for all block devices",
+			"links": ["https://aquasecurity.github.io/tfsec/v1.28.1/checks/aws/ec2/enable-at-rest-encryption/", "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/instance#ebs-ephemeral-and-root-block-devices"],
+			"description": "Root block device is not encrypted.",
+			"severity": "HIGH",
+			"warning": false,
+			"status": 0,
+			"resource": "aws_instance.web",
+			"location": {
+				"filename": "/home/noh4nsen/work/actions/poc-tf-tools/project_3/main.tf",
+				"start_line": 26,
+				"end_line": 36
+			}
+		}, {
+			"rule_id": "AVD-AWS-0028",
+			"long_id": "aws-ec2-enforce-http-token-imds",
+			"rule_description": "aws_instance should activate session tokens for Instance Metadata Service.",
+			"rule_provider": "aws",
+			"rule_service": "ec2",
+			"impact": "Instance metadata service can be interacted with freely",
+			"resolution": "Enable HTTP token requirement for IMDS",
+			"links": ["https://aquasecurity.github.io/tfsec/v1.28.1/checks/aws/ec2/enforce-http-token-imds/", "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/instance#metadata-options"],
+			"description": "Instance does not require IMDS access to require a token",
+			"severity": "HIGH",
+			"warning": false,
+			"status": 0,
+			"resource": "aws_instance.web",
+			"location": {
+				"filename": "/home/noh4nsen/work/actions/poc-tf-tools/project_3/main.tf",
+				"start_line": 26,
+				"end_line": 36
+			}
+		}, {
+			"rule_id": "AVD-AWS-0107",
+			"long_id": "aws-ec2-no-public-ingress-sgr",
+			"rule_description": "An ingress security group rule allows traffic from /0.",
+			"rule_provider": "aws",
+			"rule_service": "ec2",
+			"impact": "Your port exposed to the internet",
+			"resolution": "Set a more restrictive cidr range",
+			"links": ["https://aquasecurity.github.io/tfsec/v1.28.1/checks/aws/ec2/no-public-ingress-sgr/", "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/security_group_rule#cidr_blocks"],
+			"description": "Security group rule allows ingress from public internet.",
+			"severity": "CRITICAL",
+			"warning": false,
+			"status": 0,
+			"resource": "aws_security_group.web-sg",
+			"location": {
+				"filename": "/home/noh4nsen/work/actions/poc-tf-tools/project_3/main.tf",
+				"start_line": 44,
+				"end_line": 44
+			}
+		}, {
+			"rule_id": "AVD-AWS-0124",
+			"long_id": "aws-ec2-add-description-to-security-group-rule",
+			"rule_description": "Missing description for security group rule.",
+			"rule_provider": "aws",
+			"rule_service": "ec2",
+			"impact": "Descriptions provide context for the firewall rule reasons",
+			"resolution": "Add descriptions for all security groups rules",
+			"links": ["https://aquasecurity.github.io/tfsec/v1.28.1/checks/aws/ec2/add-description-to-security-group-rule/", "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/security_group", "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/security_group_rule"],
+			"description": "Security group rule does not have a description.",
+			"severity": "LOW",
+			"warning": false,
+			"status": 0,
+			"resource": "aws_security_group.sg",
+			"location": {
+				"filename": "/home/noh4nsen/work/actions/poc-tf-tools/project_4/setup.tf",
+				"start_line": 77,
+				"end_line": 82
+			}
+		}, {
+			"rule_id": "AVD-AWS-0131",
+			"long_id": "aws-ec2-enable-at-rest-encryption",
+			"rule_description": "Instance with unencrypted block device.",
+			"rule_provider": "aws",
+			"rule_service": "ec2",
+			"impact": "The block device could be compromised and read from",
+			"resolution": "Turn on encryption for all block devices",
+			"links": ["https://aquasecurity.github.io/tfsec/v1.28.1/checks/aws/ec2/enable-at-rest-encryption/", "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/instance#ebs-ephemeral-and-root-block-devices"],
+			"description": "Root block device is not encrypted.",
+			"severity": "HIGH",
+			"warning": false,
+			"status": 0,
+			"resource": "aws_instance.webserver",
+			"location": {
+				"filename": "/home/noh4nsen/work/actions/poc-tf-tools/project_4/main.tf",
+				"start_line": 1,
+				"end_line": 24
+			}
+		}, {
+			"rule_id": "AVD-AWS-0028",
+			"long_id": "aws-ec2-enforce-http-token-imds",
+			"rule_description": "aws_instance should activate session tokens for Instance Metadata Service.",
+			"rule_provider": "aws",
+			"rule_service": "ec2",
+			"impact": "Instance metadata service can be interacted with freely",
+			"resolution": "Enable HTTP token requirement for IMDS",
+			"links": ["https://aquasecurity.github.io/tfsec/v1.28.1/checks/aws/ec2/enforce-http-token-imds/", "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/instance#metadata-options"],
+			"description": "Instance does not require IMDS access to require a token",
+			"severity": "HIGH",
+			"warning": false,
+			"status": 0,
+			"resource": "aws_instance.webserver",
+			"location": {
+				"filename": "/home/noh4nsen/work/actions/poc-tf-tools/project_4/main.tf",
+				"start_line": 1,
+				"end_line": 24
+			}
+		}, {
+			"rule_id": "AVD-AWS-0107",
+			"long_id": "aws-ec2-no-public-ingress-sgr",
+			"rule_description": "An ingress security group rule allows traffic from /0.",
+			"rule_provider": "aws",
+			"rule_service": "ec2",
+			"impact": "Your port exposed to the internet",
+			"resolution": "Set a more restrictive cidr range",
+			"links": ["https://aquasecurity.github.io/tfsec/v1.28.1/checks/aws/ec2/no-public-ingress-sgr/", "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/security_group_rule#cidr_blocks"],
+			"description": "Security group rule allows ingress from public internet.",
+			"severity": "CRITICAL",
+			"warning": false,
+			"status": 0,
+			"resource": "aws_security_group.sg",
+			"location": {
+				"filename": "/home/noh4nsen/work/actions/poc-tf-tools/project_4/setup.tf",
+				"start_line": 75,
+				"end_line": 75
+			}
+		}, {
+			"rule_id": "AVD-AWS-0107",
+			"long_id": "aws-ec2-no-public-ingress-sgr",
+			"rule_description": "An ingress security group rule allows traffic from /0.",
+			"rule_provider": "aws",
+			"rule_service": "ec2",
+			"impact": "Your port exposed to the internet",
+			"resolution": "Set a more restrictive cidr range",
+			"links": ["https://aquasecurity.github.io/tfsec/v1.28.1/checks/aws/ec2/no-public-ingress-sgr/", "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/security_group_rule#cidr_blocks"],
+			"description": "Security group rule allows ingress from public internet.",
+			"severity": "CRITICAL",
+			"warning": false,
+			"status": 0,
+			"resource": "aws_security_group.sg",
+			"location": {
+				"filename": "/home/noh4nsen/work/actions/poc-tf-tools/project_4/setup.tf",
+				"start_line": 68,
+				"end_line": 68
+			}
+		}, {
+			"rule_id": "AVD-AWS-0178",
+			"long_id": "aws-ec2-require-vpc-flow-logs-for-all-vpcs",
+			"rule_description": "VPC Flow Logs is a feature that enables you to capture information about the IP traffic going to and from network interfaces in your VPC. After you've created a flow log, you can view and retrieve its data in Amazon CloudWatch Logs. It is recommended that VPC Flow Logs be enabled for packet \"Rejects\" for VPCs.",
+			"rule_provider": "aws",
+			"rule_service": "ec2",
+			"impact": "Without VPC flow logs, you risk not having enough information about network traffic flow to investigate incidents or identify security issues.",
+			"resolution": "Enable flow logs for VPC",
+			"links": ["https://aquasecurity.github.io/tfsec/v1.28.1/checks/aws/ec2/require-vpc-flow-logs-for-all-vpcs/"],
+			"description": "VPC Flow Logs is not enabled for VPC ",
+			"severity": "MEDIUM",
+			"warning": false,
+			"status": 0,
+			"resource": "aws_vpc.vpc",
+			"location": {
+				"filename": "/home/noh4nsen/work/actions/poc-tf-tools/project_4/setup.tf",
+				"start_line": 14,
+				"end_line": 21
+			}
+		}]
+	}
+}, {
+	"project": "project_1",
+	"report": {
+		"results": []
+	}
+}, {
+	"project": "project_2",
+	"report": {
+		"results": []
+	}
+}, {
+	"project": "project_3",
+	"report": {
+		"results": [{
+			"rule_id": "AVD-AWS-0099",
+			"long_id": "aws-ec2-add-description-to-security-group",
+			"rule_description": "Missing description for security group.",
+			"rule_provider": "aws",
+			"rule_service": "ec2",
+			"impact": "Descriptions provide context for the firewall rule reasons",
+			"resolution": "Add descriptions for all security groups",
+			"links": ["https://aquasecurity.github.io/tfsec/v1.28.1/checks/aws/ec2/add-description-to-security-group/", "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/security_group", "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/security_group_rule"],
+			"description": "Security group explicitly uses the default description.",
+			"severity": "LOW",
+			"warning": false,
+			"status": 0,
+			"resource": "aws_security_group.web-sg",
+			"location": {
+				"filename": "/home/noh4nsen/work/actions/poc-tf-tools/project_3/main.tf",
+				"start_line": 38,
+				"end_line": 46
+			}
+		}, {
+			"rule_id": "AVD-AWS-0124",
+			"long_id": "aws-ec2-add-description-to-security-group-rule",
+			"rule_description": "Missing description for security group rule.",
+			"rule_provider": "aws",
+			"rule_service": "ec2",
+			"impact": "Descriptions provide context for the firewall rule reasons",
+			"resolution": "Add descriptions for all security groups rules",
+			"links": ["https://aquasecurity.github.io/tfsec/v1.28.1/checks/aws/ec2/add-description-to-security-group-rule/", "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/security_group", "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/security_group_rule"],
+			"description": "Security group rule does not have a description.",
+			"severity": "LOW",
+			"warning": false,
+			"status": 0,
+			"resource": "aws_security_group.web-sg",
+			"location": {
+				"filename": "/home/noh4nsen/work/actions/poc-tf-tools/project_3/main.tf",
+				"start_line": 40,
+				"end_line": 45
+			}
+		}, {
+			"rule_id": "AVD-AWS-0131",
+			"long_id": "aws-ec2-enable-at-rest-encryption",
+			"rule_description": "Instance with unencrypted block device.",
+			"rule_provider": "aws",
+			"rule_service": "ec2",
+			"impact": "The block device could be compromised and read from",
+			"resolution": "Turn on encryption for all block devices",
+			"links": ["https://aquasecurity.github.io/tfsec/v1.28.1/checks/aws/ec2/enable-at-rest-encryption/", "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/instance#ebs-ephemeral-and-root-block-devices"],
+			"description": "Root block device is not encrypted.",
+			"severity": "HIGH",
+			"warning": false,
+			"status": 0,
+			"resource": "aws_instance.web",
+			"location": {
+				"filename": "/home/noh4nsen/work/actions/poc-tf-tools/project_3/main.tf",
+				"start_line": 26,
+				"end_line": 36
+			}
+		}, {
+			"rule_id": "AVD-AWS-0028",
+			"long_id": "aws-ec2-enforce-http-token-imds",
+			"rule_description": "aws_instance should activate session tokens for Instance Metadata Service.",
+			"rule_provider": "aws",
+			"rule_service": "ec2",
+			"impact": "Instance metadata service can be interacted with freely",
+			"resolution": "Enable HTTP token requirement for IMDS",
+			"links": ["https://aquasecurity.github.io/tfsec/v1.28.1/checks/aws/ec2/enforce-http-token-imds/", "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/instance#metadata-options"],
+			"description": "Instance does not require IMDS access to require a token",
+			"severity": "HIGH",
+			"warning": false,
+			"status": 0,
+			"resource": "aws_instance.web",
+			"location": {
+				"filename": "/home/noh4nsen/work/actions/poc-tf-tools/project_3/main.tf",
+				"start_line": 26,
+				"end_line": 36
+			}
+		}, {
+			"rule_id": "AVD-AWS-0107",
+			"long_id": "aws-ec2-no-public-ingress-sgr",
+			"rule_description": "An ingress security group rule allows traffic from /0.",
+			"rule_provider": "aws",
+			"rule_service": "ec2",
+			"impact": "Your port exposed to the internet",
+			"resolution": "Set a more restrictive cidr range",
+			"links": ["https://aquasecurity.github.io/tfsec/v1.28.1/checks/aws/ec2/no-public-ingress-sgr/", "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/security_group_rule#cidr_blocks"],
+			"description": "Security group rule allows ingress from public internet.",
+			"severity": "CRITICAL",
+			"warning": false,
+			"status": 0,
+			"resource": "aws_security_group.web-sg",
+			"location": {
+				"filename": "/home/noh4nsen/work/actions/poc-tf-tools/project_3/main.tf",
+				"start_line": 44,
+				"end_line": 44
+			}
+		}]
+	}
+}, {
+	"project": "project_4",
+	"report": {
+		"results": [{
+			"rule_id": "AVD-AWS-0124",
+			"long_id": "aws-ec2-add-description-to-security-group-rule",
+			"rule_description": "Missing description for security group rule.",
+			"rule_provider": "aws",
+			"rule_service": "ec2",
+			"impact": "Descriptions provide context for the firewall rule reasons",
+			"resolution": "Add descriptions for all security groups rules",
+			"links": ["https://aquasecurity.github.io/tfsec/v1.28.1/checks/aws/ec2/add-description-to-security-group-rule/", "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/security_group", "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/security_group_rule"],
+			"description": "Security group rule does not have a description.",
+			"severity": "LOW",
+			"warning": false,
+			"status": 0,
+			"resource": "aws_security_group.sg",
+			"location": {
+				"filename": "/home/noh4nsen/work/actions/poc-tf-tools/project_4/setup.tf",
+				"start_line": 77,
+				"end_line": 82
+			}
+		}, {
+			"rule_id": "AVD-AWS-0131",
+			"long_id": "aws-ec2-enable-at-rest-encryption",
+			"rule_description": "Instance with unencrypted block device.",
+			"rule_provider": "aws",
+			"rule_service": "ec2",
+			"impact": "The block device could be compromised and read from",
+			"resolution": "Turn on encryption for all block devices",
+			"links": ["https://aquasecurity.github.io/tfsec/v1.28.1/checks/aws/ec2/enable-at-rest-encryption/", "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/instance#ebs-ephemeral-and-root-block-devices"],
+			"description": "Root block device is not encrypted.",
+			"severity": "HIGH",
+			"warning": false,
+			"status": 0,
+			"resource": "aws_instance.webserver",
+			"location": {
+				"filename": "/home/noh4nsen/work/actions/poc-tf-tools/project_4/main.tf",
+				"start_line": 1,
+				"end_line": 24
+			}
+		}, {
+			"rule_id": "AVD-AWS-0028",
+			"long_id": "aws-ec2-enforce-http-token-imds",
+			"rule_description": "aws_instance should activate session tokens for Instance Metadata Service.",
+			"rule_provider": "aws",
+			"rule_service": "ec2",
+			"impact": "Instance metadata service can be interacted with freely",
+			"resolution": "Enable HTTP token requirement for IMDS",
+			"links": ["https://aquasecurity.github.io/tfsec/v1.28.1/checks/aws/ec2/enforce-http-token-imds/", "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/instance#metadata-options"],
+			"description": "Instance does not require IMDS access to require a token",
+			"severity": "HIGH",
+			"warning": false,
+			"status": 0,
+			"resource": "aws_instance.webserver",
+			"location": {
+				"filename": "/home/noh4nsen/work/actions/poc-tf-tools/project_4/main.tf",
+				"start_line": 1,
+				"end_line": 24
+			}
+		}, {
+			"rule_id": "AVD-AWS-0107",
+			"long_id": "aws-ec2-no-public-ingress-sgr",
+			"rule_description": "An ingress security group rule allows traffic from /0.",
+			"rule_provider": "aws",
+			"rule_service": "ec2",
+			"impact": "Your port exposed to the internet",
+			"resolution": "Set a more restrictive cidr range",
+			"links": ["https://aquasecurity.github.io/tfsec/v1.28.1/checks/aws/ec2/no-public-ingress-sgr/", "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/security_group_rule#cidr_blocks"],
+			"description": "Security group rule allows ingress from public internet.",
+			"severity": "CRITICAL",
+			"warning": false,
+			"status": 0,
+			"resource": "aws_security_group.sg",
+			"location": {
+				"filename": "/home/noh4nsen/work/actions/poc-tf-tools/project_4/setup.tf",
+				"start_line": 75,
+				"end_line": 75
+			}
+		}, {
+			"rule_id": "AVD-AWS-0107",
+			"long_id": "aws-ec2-no-public-ingress-sgr",
+			"rule_description": "An ingress security group rule allows traffic from /0.",
+			"rule_provider": "aws",
+			"rule_service": "ec2",
+			"impact": "Your port exposed to the internet",
+			"resolution": "Set a more restrictive cidr range",
+			"links": ["https://aquasecurity.github.io/tfsec/v1.28.1/checks/aws/ec2/no-public-ingress-sgr/", "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/security_group_rule#cidr_blocks"],
+			"description": "Security group rule allows ingress from public internet.",
+			"severity": "CRITICAL",
+			"warning": false,
+			"status": 0,
+			"resource": "aws_security_group.sg",
+			"location": {
+				"filename": "/home/noh4nsen/work/actions/poc-tf-tools/project_4/setup.tf",
+				"start_line": 68,
+				"end_line": 68
+			}
+		}, {
+			"rule_id": "AVD-AWS-0178",
+			"long_id": "aws-ec2-require-vpc-flow-logs-for-all-vpcs",
+			"rule_description": "VPC Flow Logs is a feature that enables you to capture information about the IP traffic going to and from network interfaces in your VPC. After you've created a flow log, you can view and retrieve its data in Amazon CloudWatch Logs. It is recommended that VPC Flow Logs be enabled for packet \"Rejects\" for VPCs.",
+			"rule_provider": "aws",
+			"rule_service": "ec2",
+			"impact": "Without VPC flow logs, you risk not having enough information about network traffic flow to investigate incidents or identify security issues.",
+			"resolution": "Enable flow logs for VPC",
+			"links": ["https://aquasecurity.github.io/tfsec/v1.28.1/checks/aws/ec2/require-vpc-flow-logs-for-all-vpcs/"],
+			"description": "VPC Flow Logs is not enabled for VPC ",
+			"severity": "MEDIUM",
+			"warning": false,
+			"status": 0,
+			"resource": "aws_vpc.vpc",
+			"location": {
+				"filename": "/home/noh4nsen/work/actions/poc-tf-tools/project_4/setup.tf",
+				"start_line": 14,
+				"end_line": 21
+			}
+		}]
+	}
+}]

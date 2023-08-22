@@ -1,0 +1,227 @@
+[{
+	"project": ".github",
+	"report": {
+		"issues": [],
+		"errors": []
+	}
+}, {
+	"project": ".",
+	"report": {
+		"issues": [],
+		"errors": []
+	}
+}, {
+	"project": "project_1",
+	"report": {
+		"issues": [{
+			"rule": {
+				"name": "terraform_required_version",
+				"severity": "warning",
+				"link": "https://github.com/terraform-linters/tflint-ruleset-terraform/blob/v0.4.0/docs/rules/terraform_required_version.md"
+			},
+			"message": "terraform \"required_version\" attribute is required",
+			"range": {
+				"filename": "",
+				"start": {
+					"line": 0,
+					"column": 0
+				},
+				"end": {
+					"line": 0,
+					"column": 0
+				}
+			},
+			"callers": []
+		}],
+		"errors": []
+	}
+}, {
+	"project": "project_2",
+	"report": {
+		"issues": [{
+			"rule": {
+				"name": "terraform_required_version",
+				"severity": "warning",
+				"link": "https://github.com/terraform-linters/tflint-ruleset-terraform/blob/v0.4.0/docs/rules/terraform_required_version.md"
+			},
+			"message": "terraform \"required_version\" attribute is required",
+			"range": {
+				"filename": "",
+				"start": {
+					"line": 0,
+					"column": 0
+				},
+				"end": {
+					"line": 0,
+					"column": 0
+				}
+			},
+			"callers": []
+		}, {
+			"rule": {
+				"name": "terraform_required_providers",
+				"severity": "warning",
+				"link": "https://github.com/terraform-linters/tflint-ruleset-terraform/blob/v0.4.0/docs/rules/terraform_required_providers.md"
+			},
+			"message": "Missing version constraint for provider \"kubernetes\" in `required_providers`",
+			"range": {
+				"filename": "kubernetes.tf",
+				"start": {
+					"line": 3,
+					"column": 18
+				},
+				"end": {
+					"line": 5,
+					"column": 6
+				}
+			},
+			"callers": []
+		}, {
+			"rule": {
+				"name": "terraform_deprecated_index",
+				"severity": "warning",
+				"link": "https://github.com/terraform-linters/tflint-ruleset-terraform/blob/v0.4.0/docs/rules/terraform_deprecated_index.md"
+			},
+			"message": "List items should be accessed using square brackets",
+			"range": {
+				"filename": "service-nginx.tf",
+				"start": {
+					"line": 9,
+					"column": 45
+				},
+				"end": {
+					"line": 9,
+					"column": 47
+				}
+			},
+			"callers": []
+		}, {
+			"rule": {
+				"name": "terraform_deprecated_index",
+				"severity": "warning",
+				"link": "https://github.com/terraform-linters/tflint-ruleset-terraform/blob/v0.4.0/docs/rules/terraform_deprecated_index.md"
+			},
+			"message": "List items should be accessed using square brackets",
+			"range": {
+				"filename": "service-nginx.tf",
+				"start": {
+					"line": 9,
+					"column": 56
+				},
+				"end": {
+					"line": 9,
+					"column": 58
+				}
+			},
+			"callers": []
+		}],
+		"errors": []
+	}
+}, {
+	"project": "project_3",
+	"report": {
+		"issues": [{
+			"rule": {
+				"name": "terraform_required_version",
+				"severity": "warning",
+				"link": "https://github.com/terraform-linters/tflint-ruleset-terraform/blob/v0.4.0/docs/rules/terraform_required_version.md"
+			},
+			"message": "terraform \"required_version\" attribute is required",
+			"range": {
+				"filename": "",
+				"start": {
+					"line": 0,
+					"column": 0
+				},
+				"end": {
+					"line": 0,
+					"column": 0
+				}
+			},
+			"callers": []
+		}, {
+			"rule": {
+				"name": "terraform_required_providers",
+				"severity": "warning",
+				"link": "https://github.com/terraform-linters/tflint-ruleset-terraform/blob/v0.4.0/docs/rules/terraform_required_providers.md"
+			},
+			"message": "Missing version constraint for provider \"aws\" in `required_providers`",
+			"range": {
+				"filename": "main.tf",
+				"start": {
+					"line": 3,
+					"column": 11
+				},
+				"end": {
+					"line": 5,
+					"column": 6
+				}
+			},
+			"callers": []
+		}, {
+			"rule": {
+				"name": "terraform_required_providers",
+				"severity": "warning",
+				"link": "https://github.com/terraform-linters/tflint-ruleset-terraform/blob/v0.4.0/docs/rules/terraform_required_providers.md"
+			},
+			"message": "Missing version constraint for provider \"random\" in `required_providers`",
+			"range": {
+				"filename": "main.tf",
+				"start": {
+					"line": 6,
+					"column": 14
+				},
+				"end": {
+					"line": 8,
+					"column": 6
+				}
+			},
+			"callers": []
+		}],
+		"errors": []
+	}
+}, {
+	"project": "project_4",
+	"report": {
+		"issues": [{
+			"rule": {
+				"name": "terraform_required_version",
+				"severity": "warning",
+				"link": "https://github.com/terraform-linters/tflint-ruleset-terraform/blob/v0.4.0/docs/rules/terraform_required_version.md"
+			},
+			"message": "terraform \"required_version\" attribute is required",
+			"range": {
+				"filename": "",
+				"start": {
+					"line": 0,
+					"column": 0
+				},
+				"end": {
+					"line": 0,
+					"column": 0
+				}
+			},
+			"callers": []
+		}, {
+			"rule": {
+				"name": "terraform_required_providers",
+				"severity": "warning",
+				"link": "https://github.com/terraform-linters/tflint-ruleset-terraform/blob/v0.4.0/docs/rules/terraform_required_providers.md"
+			},
+			"message": "Missing version constraint for provider \"aws\" in `required_providers`",
+			"range": {
+				"filename": "setup.tf",
+				"start": {
+					"line": 59,
+					"column": 1
+				},
+				"end": {
+					"line": 59,
+					"column": 35
+				}
+			},
+			"callers": []
+		}],
+		"errors": []
+	}
+}]
