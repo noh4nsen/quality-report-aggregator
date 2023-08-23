@@ -37,38 +37,49 @@ func (tfsec *Tfsec) BuildReport() string {
 	var report string
 
 	report += fmt.Sprintf(`
-	
-		- Project: %s
-		- Report:
+	<ul>
+		<li>Project: %s</li>
+		<li>Report:</li>
+		<ul>
 	`, tfsec.Project)
 
 	for index, result := range tfsec.Report.Results {
 		report += fmt.Sprintf(`
-			- Issue: %d
-			- Id: %s
-			- Severity: %s
-			- Provider: %s
-			- Service: %s
-			- Spec: %s
-			- Impact: %s
-			- Resolution: %s
-			- Links:	
+			<li>Issue: %d</li>
+			<li>Id: %s</li>
+			<li>Severity: %s</li>
+			<li>Provider: %s</li>
+			<li>Service: %s</li>
+			<li>Spec: %s</li>
+			<li>Impact: %s</li>
+			<li>Resolution: %s</li>
+			<li>Links:</li>
+			<ul>
 		`, index, result.RuleId, result.Severity, result.RuleProvider, result.RuleService, strings.Replace(result.RuleDescription, "'", "", -1), result.Impact, result.Resolution)
 
 		for _, link := range result.Links {
 			report += fmt.Sprintf(`
-				- %s
+				<li>%s</li>
 			`, link)
 		}
 
 		report += fmt.Sprintf(`
-			- Resource: %s
-			- Location:
-				- Filename: %s
-				- StartLine: %d
-				- EndLine: %d
+			</ul>
+			<li>Resource: %s</li>
+			<li>Location:</li>
+			<ul>
+				<li>Filename: %s</li>
+				<li>StartLine: %d</li>
+				<li>EndLine: %d</li>
+			</ul>
+		<br>
 		`, result.Resource, result.Location.Filename, result.Location.StartLine, result.Location.EndLine)
 	}
+
+	report += fmt.Sprintf(`
+		</ul>
+	</ul>
+	`)
 
 	return report
 }
