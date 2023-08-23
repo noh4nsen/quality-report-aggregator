@@ -13,4 +13,4 @@ checkov_report=$(echo -n $encoded_checkov_report | base64 -d)
 report=$(quality-report-aggregator "$tflint_report" "$tfsec_report" "$checkov_report")
 
 echo "--- Executing quality-report-aggregator ---"
-echo "report='$(echo $report)'" >> $GITHUB_OUTPUT
+echo "report=$(echo $report)" >> $GITHUB_OUTPUT
