@@ -27,30 +27,30 @@ func (tflint *Tflint) BuildReport() string {
 	var report string
 
 	report += fmt.Sprintf(`
-	\n
-	\t	- Project: %s \n
-	\t	- Report: \n
+
+		- Project: %s
+		- Report:
 	`, tflint.Project)
 
 	for index, issue := range tflint.Report.Issues {
 		report += fmt.Sprintf(`
-		\t\t		- Issue: \t %d \n
-		\t\t		- Message: \t %s \n
-		\t\t		- Rule: \n
-		\t\t\t			- Link: \t %s \n
-		\t\t\t			- Name: \t %s \n
-		\t\t\t			- Severity: \t %s \n
-		\n
+				- Issue: %d
+				- Message: %s
+				- Rule:
+					- Link: %s
+					- Name: %s
+					- Severity: %s
+
 		`, index, issue.Message, issue.Rule.Link, issue.Rule.Name, issue.Rule.Severity)
 	}
 
 	report += fmt.Sprintf(`
-	\t\t		- Errors: \n
+			- Errors:
 	`)
 
 	for _, error := range tflint.Report.Errors {
 		report += fmt.Sprintf(`
-				- %s \n
+				- %s
 		`, error)
 	}
 

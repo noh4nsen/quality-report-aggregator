@@ -37,36 +37,36 @@ func (tfsec *Tfsec) BuildReport() string {
 	var report string
 
 	report += fmt.Sprintf(`
-	\n
-	\t	- Project: %s \n
-	\t 	- Report: \n
+	
+		- Project: %s
+		- Report:
 	`, tfsec.Project)
 
 	for index, result := range tfsec.Report.Results {
 		report += fmt.Sprintf(`
-		\t\t		- Issue: %d \n
-		\t\t\t		- Id: \t %s \n
-		\t\t\t		- Severity: \t %s \n
-		\t\t\t		- Provider: \t %s \n
-		\t\t\t 		- Service: \t %s \n
-		\t\t\t		- Spec: \t %s \n
-		\t\t\t 		- Impact: \t %s \n
-		\t\t\t 		- Resolution: \t %s \n
-		\t\t\t 		- Links: \n	
+			- Issue: %d
+			- Id: %s
+			- Severity: %s
+			- Provider: %s
+			- Service: %s
+			- Spec: %s
+			- Impact: %s
+			- Resolution: %s
+			- Links:	
 		`, index, result.RuleId, result.Severity, result.RuleProvider, result.RuleService, strings.Replace(result.RuleDescription, "'", "", -1), result.Impact, result.Resolution)
 
 		for _, link := range result.Links {
 			report += fmt.Sprintf(`
-			\t\t\t\t	- %s \n
+				- %s
 			`, link)
 		}
 
 		report += fmt.Sprintf(`
-		\t\t\t 		- Resource: \t %s \n
-		\t\t\t		- Location: \n
-		\t\t\t\t		- Filename: \t %s \n
-		\t\t\t\t		- StartLine: \t %d \n
-		\t\t\t\t		- EndLine: \t %d \n
+			- Resource: %s
+			- Location:
+				- Filename: %s
+				- StartLine: %d
+				- EndLine: %d
 		`, result.Resource, result.Location.Filename, result.Location.StartLine, result.Location.EndLine)
 	}
 

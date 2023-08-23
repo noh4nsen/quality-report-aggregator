@@ -39,31 +39,31 @@ func (checkov *Checkov) BuildReport() string {
 	var report string
 
 	report += fmt.Sprintf(`
-	\n
-	\t	- Project: %s \n
-	\t	- Report: \n
-	\t\t		- CheckType: %s \n
-	\t\t		- Results: \n
+
+		- Project: %s
+		- Report:
+			- CheckType: %s
+			- Results:
 	`, checkov.Project, checkov.Report.CheckType)
 
 	for index, failedCheck := range checkov.Report.Results.FailedChecks {
 		report += fmt.Sprintf(`
-		\t\t\t		- Check: \t %d \n
-		\t\t\t		- Id: \t %s \n
-		\t\t\t		- Name: \t %s \n
-		\t\t\t		- Result: \t %s \n
-		\t\t\t		- FilePath: \t %s \n
-		\t\t\t		- Resource: \t %s \n
-		\t\t\t		- Guideline: \t %s \n
-		\n
+				- Check: %d
+				- Id: %s
+				- Name: %s
+				- Result: %s
+				- FilePath: %s
+				- Resource: %s
+				- Guideline: %s
+
 		`, index, failedCheck.CheckId, failedCheck.CheckName, failedCheck.CheckResult.Result, failedCheck.FilePath, failedCheck.Resource, failedCheck.Guideline)
 	}
 
 	report += fmt.Sprintf(`
-	\t\t		- Summary: \n
-	\t\t\t			- Passed: \t %d \n
-	\t\t\t			- Failed: \t %d \n
-	\n
+			- Summary:
+				- Passed: %d
+				- Failed: %d
+
 	`, checkov.Report.Summary.Passed, checkov.Report.Summary.Failed)
 
 	return report
